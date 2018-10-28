@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Sun Oct 28 16:14:02 EDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-bc4f-de0c-0000064eaf58 
-on database directory /Users/jeremyjiang/Desktop/ASE/Hotel/database with class loader sun.misc.Launcher$AppClassLoader@87aac27 
-Loaded from file:/Users/jeremyjiang/Downloads/db-derby-10.14.2.0-bin/lib/derby.jar
+Sun Oct 28 19:43:40 EDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-bd0f-cabc-00000707ec10 
+on database directory /Users/cheng/Desktop/softwareEngineering/Hotel/database with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/Users/cheng/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_161-b12
-user.dir=/Users/jeremyjiang/Desktop/ASE/Hotel
+java.runtime.version=1.8.0_91-b14
+user.dir=/Users/cheng/Desktop/softwareEngineering/Hotel
 os.name=Mac OS X
 os.arch=x86_64
-os.version=10.12.6
+os.version=10.13.4
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
