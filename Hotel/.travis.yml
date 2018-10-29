@@ -19,6 +19,8 @@ before_script:
   - if [[ "${TRAVIS_OS_NAME}" == osx ]]; then brew update; brew cask reinstall caskroom/versions/java8; fi
 
 script:
-  - mvn test 
+  - cd Hotel
+  - mvn test
+
 
 
