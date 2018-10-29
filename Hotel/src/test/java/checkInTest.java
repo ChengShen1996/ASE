@@ -19,6 +19,6 @@ public class checkInTest {
     @Test
     public void button() {
 
-        assertEquals(1,1);
+        assertEquals(2,2;
     }
 }
