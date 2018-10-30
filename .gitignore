@@ -1,1 +1,7 @@
 /Hotel/out/
+/Hotel/target/
+/Hotel/derby.log
+Hotel/.idea/workspace.xml
+/Hotel/database/db.lck
+/Hotel/database/log/log1.dat
+/Hotel/database/seg0/c490.dat
