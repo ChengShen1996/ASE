@@ -18,7 +18,7 @@ public class GuestMenu extends Application {
         stage.setScene(scene);
         stage.show();
 
-        
+        //just for pre-commit test
     }
 
 

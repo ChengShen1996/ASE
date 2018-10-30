@@ -1,5 +1,5 @@
-logInTest.class
 guestMenuUITest.class
+logInTest.class
 roomServiceUITest.class
 selectDatabaseTest.class
 checkOutUITest.class
