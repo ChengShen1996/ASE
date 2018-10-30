@@ -6,13 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
-import com.jfoenix.controls.JFXButton;
+import javafx.scene.control.Button;
+import static org.junit.Assert.*;
 import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
-public class logInUITest extends ApplicationTest {
+public class frontDeskUITest extends ApplicationTest {
     @Override
     public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/logInMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/frontDeskMenu.fxml"));
 
         Scene scene = new Scene(root);
 
@@ -22,10 +23,13 @@ public class logInUITest extends ApplicationTest {
 
     @Test
     public void nametest() {
-        JFXButton bt1 = lookup("#main_front_desk").query();
-        assertThat(bt1).hasText("Front Desk");
-        JFXButton bt2 = lookup("#main_manager").query();
-        assertThat(bt2).hasText("Manager");
+        Button bt1 = lookup("#front_desk_guest").query();
+        Button bt2 = lookup("#front_desk_room").query();
+        Button bt3 = lookup("#front_desk_recommend").query();
+        assertThat(bt1).hasText("Guest");
+        assertThat(bt2).hasText("Available Rooms");
+        assertThat(bt3).hasText("Recommendation");
     }
+
 
 }

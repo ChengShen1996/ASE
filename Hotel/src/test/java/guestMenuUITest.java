@@ -9,10 +9,10 @@ import javafx.fxml.FXMLLoader;
 import com.jfoenix.controls.JFXButton;
 import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
-public class logInUITest extends ApplicationTest {
+public class guestMenuUITest extends ApplicationTest {
     @Override
     public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/logInMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/GuestMenu.fxml"));
 
         Scene scene = new Scene(root);
 
@@ -22,10 +22,11 @@ public class logInUITest extends ApplicationTest {
 
     @Test
     public void nametest() {
-        JFXButton bt1 = lookup("#main_front_desk").query();
-        assertThat(bt1).hasText("Front Desk");
-        JFXButton bt2 = lookup("#main_manager").query();
-        assertThat(bt2).hasText("Manager");
+        JFXButton bt1 = lookup("#guest_menu_checkin").query();
+        JFXButton bt2 = lookup("#guest_menu_checkout").query();
+        JFXButton bt3 = lookup("#guest_menu_roomserv").query();
+        assertThat(bt1).hasText("Check-In");
+        assertThat(bt2).hasText("Check-Out");
+        assertThat(bt3).hasText("Room Service");
     }
-
 }

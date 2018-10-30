@@ -11,7 +11,7 @@ import com.jfoenix.controls.JFXTextField;
 import static org.junit.Assert.*;
 import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
-public class CheckInUITest extends ApplicationTest {
+public class checkInUITest extends ApplicationTest {
     @Override
     public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/addGuest.fxml"));
