@@ -11,6 +11,7 @@ public class checkOutGuest extends Application {
 
     @Override
     public void start(Stage stage) throws Exception{
+        int a = 1;
         Parent root = FXMLLoader.load(getClass().getResource("/resources/deleteGuest.fxml"));
 
         Scene scene = new Scene(root);
