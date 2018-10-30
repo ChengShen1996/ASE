@@ -17,6 +17,7 @@ public class GuestMenu extends Application {
 
         stage.setScene(scene);
         stage.show();
+        
     }
 
 
