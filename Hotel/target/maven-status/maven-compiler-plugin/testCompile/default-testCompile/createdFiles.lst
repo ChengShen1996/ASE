@@ -1,0 +1,4 @@
+logInTest.class
+selectDatabaseTest.class
+updateDatabaseTest.class
+insertToDatabaseTest.class

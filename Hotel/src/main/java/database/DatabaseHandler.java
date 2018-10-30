@@ -82,7 +82,7 @@ public class DatabaseHandler {
             stmt.execute(qu);
             return true;
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error" + ex.getMessage(), "Error OCcured", JOptionPane.ERROR_MESSAGE);
+            //JOptionPane.showMessageDialog(null, "Error" + ex.getMessage(), "Error OCcured", JOptionPane.ERROR_MESSAGE);
             System.out.println("Exception at execQuery:dataHandler" + ex.getLocalizedMessage());
             return false;
         } finally {

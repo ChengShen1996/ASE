@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import com.jfoenix.controls.JFXButton;
-    import static org.testfx.matcher.control.LabeledMatchers.hasText;
+import static org.testfx.matcher.control.LabeledMatchers.hasText;
 
 public class logInTest extends ApplicationTest {
     @Override
