@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/jeremyjiang/Desktop/SoftwareEngineer/ASE/Hotel/src/main/java/CheckOut/deleteGuestController.java
 /Users/jeremyjiang/Desktop/SoftwareEngineer/ASE/Hotel/src/main/java/Guest/GuestMenu.java
 /Users/jeremyjiang/Desktop/SoftwareEngineer/ASE/Hotel/src/main/java/RoomService/addRoomService.java
@@ -11,3 +12,18 @@
 /Users/jeremyjiang/Desktop/SoftwareEngineer/ASE/Hotel/src/main/java/database/DatabaseHandler.java
 /Users/jeremyjiang/Desktop/SoftwareEngineer/ASE/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java
 /Users/jeremyjiang/Desktop/SoftwareEngineer/ASE/Hotel/src/main/java/Guest/GuestMenuController.java
+=======
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/RoomService/addRoomService.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/FrontDesk/frontDesk.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/CheckOut/checkOutGuest.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/RoomService/RoomServiceController.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/CheckIn/HotelAssistant.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/CheckOut/deleteGuestController.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/LogIn/logIn.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/Guest/GuestMenu.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/LogIn/logInMenuController.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/CheckIn/addGuestController.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/Guest/GuestMenuController.java
+/Users/lingsonggao/IdeaProjects/Project/ASE/Hotel/src/main/java/database/DatabaseHandler.java
+>>>>>>> iteration1-test-Lingsong
