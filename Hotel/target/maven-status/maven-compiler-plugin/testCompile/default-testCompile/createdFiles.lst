@@ -1,0 +1,10 @@
+logInTest.class
+guestMenuUITest.class
+roomServiceUITest.class
+selectDatabaseTest.class
+checkOutUITest.class
+frontDeskUITest.class
+checkInUITest.class
+updateDatabaseTest.class
+insertToDatabaseTest.class
+logInUITest.class
