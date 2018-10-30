@@ -20,7 +20,6 @@ public class updateDatabaseTest {
         String checkOutDate = "2012-12-13";
         String requirement = "burger";
 
-
         String qu = "INSERT INTO CUSTOMER VALUES("
                 + "'" + name + "',"
                 + roomId + ","
