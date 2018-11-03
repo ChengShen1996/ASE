@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FrontDesk.frontDeskMenuController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FrontDesk.frontDeskMenuController">
    <children>
       <BorderPane prefHeight="200.0" prefWidth="200.0">
          <top>
@@ -36,7 +36,7 @@
          <right>
             <VBox prefHeight="503.0" prefWidth="170.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="front_desk_guest" contentDisplay="TOP" mnemonicParsing="false" onAction="#to_guestmenu" prefHeight="252.0" prefWidth="170.0" text="Guest">
+                  <Button fx:id="front_desk_guest" contentDisplay="TOP" mnemonicParsing="false" onAction="#to_guestmenu" prefHeight="309.5" prefWidth="170.0" text="Guest">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -44,7 +44,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="map" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#show_map" prefHeight="263.0" prefWidth="170.0" text="Map">
+                  <Button fx:id="map" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#show_map" prefHeight="309.5" prefWidth="170.0" text="Map">
                      <graphic>
                         <ImageView fitHeight="37.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -64,12 +64,37 @@
                            <children>
                               <BorderPane prefHeight="475.0" prefWidth="571.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <top>
-                                    <JFXTextField prefHeight="32.0" prefWidth="386.0" BorderPane.alignment="CENTER">
-                                       <BorderPane.margin>
-                                          <Insets left="100.0" right="100.0" />
-                                       </BorderPane.margin>
-                                    </JFXTextField>
+                                    <HBox prefHeight="74.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXTextField labelFloat="true" prefHeight="27.0" prefWidth="179.0" promptText="start date">
+                                             <HBox.margin>
+                                                <Insets left="50.0" top="20.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                          <JFXTextField labelFloat="true" prefHeight="27.0" prefWidth="183.0" promptText="end date">
+                                             <HBox.margin>
+                                                <Insets left="150.0" top="20.0" />
+                                             </HBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </HBox>
                                  </top>
+                                 <bottom>
+                                    <HBox prefHeight="66.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton alignment="CENTER" prefHeight="27.0" prefWidth="104.0" text="Reset" translateX="300.0" translateY="20.0" />
+                                          <JFXButton alignment="CENTER" prefHeight="27.0" prefWidth="116.0" text="OK" translateX="80.0" translateY="20.0" />
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                                 <center>
+                                    <TableView prefHeight="200.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                        <TableColumn prefWidth="315.0" text="Available Room" />
+                                        <TableColumn prefWidth="384.0" text="Room Type" />
+                                      </columns>
+                                    </TableView>
+                                 </center>
                               </BorderPane>
                            </children></AnchorPane>
                      </content>

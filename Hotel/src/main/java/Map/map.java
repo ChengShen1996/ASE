@@ -10,7 +10,7 @@ public class map extends Application {
 
     @Override
     public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/addGuest.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/showMap.fxml"));
 
         Scene scene = new Scene(root);
 
