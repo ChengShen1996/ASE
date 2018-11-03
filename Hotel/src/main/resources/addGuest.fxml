@@ -47,14 +47,20 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </JFXTextField>
-            <JFXTextField fx:id="total_price" labelFloat="true" layoutX="10.0" layoutY="138.0" promptText="Total Price">
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </VBox.margin>
-            </JFXTextField>
+            <HBox prefHeight="55.0" prefWidth="476.0">
+               <children>
+                  <JFXTextField fx:id="Total_price" labelFloat="true" promptText="Total Price">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXButton fx:id="Total_price_button" onAction="#Show_total_price" prefHeight="32.0" prefWidth="99.0" stylesheets="@checkin.css" text="Total Price">
+                     <HBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
             <JFXTextField fx:id="requirements" labelFloat="true" layoutX="10.0" layoutY="174.0" promptText="Requirements">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

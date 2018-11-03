@@ -44,13 +44,22 @@ public class addGuestController implements Initializable{
     private JFXTextField guest_name;
 
     @FXML
-    private JFXTextField total_price;
+    private JFXTextField Total_price;
+
+    @FXML
+    private JFXButton Total_price_button;
 
     @FXML
     private JFXTextField room_number;
 
     @FXML
     private JFXTextField check_in_date;
+
+
+    @FXML
+    void Show_total_price(ActionEvent event) {
+
+    }
 
     @FXML
     void addGuest(ActionEvent event) {

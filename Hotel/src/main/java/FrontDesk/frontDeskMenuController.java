@@ -21,11 +21,7 @@ public class frontDeskMenuController {
     private Button front_desk_guest;
 
     @FXML
-    private Button front_desk_recommend;
-
-    @FXML
-    private Button front_desk_room;
-
+    private Button map;
 
 
     @FXML
@@ -34,13 +30,8 @@ public class frontDeskMenuController {
     }
 
     @FXML
-    void to_rooms(ActionEvent event) {
-
-    }
-
-    @FXML
-    void to_recommend(ActionEvent event) {
-
+    void show_map(ActionEvent event) {
+        loadWindow("/showMap.fxml", "Map");
     }
 
     void loadWindow(String loc, String title){
