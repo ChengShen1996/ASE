@@ -49,12 +49,15 @@
             </JFXTextField>
             <HBox prefHeight="55.0" prefWidth="476.0">
                <children>
-                  <JFXTextField fx:id="Total_price" labelFloat="true" promptText="Total Price">
+                  <Text fx:id="priceText" strokeType="OUTSIDE" strokeWidth="0.0" text="\$?" textAlignment="CENTER" wrappingWidth="99.21875">
                      <HBox.margin>
-                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                        <Insets left="30.0" top="10.0" />
                      </HBox.margin>
-                  </JFXTextField>
-                  <JFXButton fx:id="Total_price_button" onAction="#Show_total_price" prefHeight="32.0" prefWidth="99.0" stylesheets="@checkin.css" text="Total Price">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <JFXButton fx:id="Total_price_button" onAction="#Show_total_price" prefHeight="32.0" prefWidth="217.0" stylesheets="@checkin.css" text="Click to show total price">
                      <HBox.margin>
                         <Insets left="30.0" top="10.0" />
                      </HBox.margin>

@@ -1,5 +1,7 @@
 package database;
 
+import javafx.scene.control.Alert;
+
 import javax.swing.*;
 import java.sql.*;
 
@@ -31,6 +33,104 @@ public class DatabaseHandler {
     }
 
     public void setupTable() {
+        setupRoomTypeTable();
+        setupRoomTable();
+        setupCustomerTable();
+        initRoomType();
+        initRoom();
+    }
+
+    public void dropTable() {
+        String customerTableName = "CUSTOMER";
+        String roomTableName = "ROOM";
+        String roomTypeTableName = "ROOMTYPE";
+
+        try {
+            stmt = conn.createStatement();
+            DatabaseMetaData dbm = conn.getMetaData();
+            ResultSet customerTables =  dbm.getTables(null, null, customerTableName.toUpperCase(), null);
+            ResultSet roomTables =  dbm.getTables(null, null, roomTableName.toUpperCase(), null);
+            ResultSet roomTypeTables =  dbm.getTables(null, null, roomTypeTableName.toUpperCase(), null);
+
+
+
+            if (customerTables.next()) {
+                stmt.execute("DROP TABLE " + customerTableName);
+                System.out.println(customerTableName + " drop success");
+            }
+
+            if (roomTables.next()) {
+                stmt.execute("DROP TABLE " + roomTableName);
+                System.out.println(roomTableName + " drop success");
+            }
+
+            if (roomTypeTables.next()) {
+                stmt.execute("DROP TABLE " + roomTypeTableName);
+                System.out.println(roomTypeTableName + " drop success");
+            }
+
+
+
+        } catch (SQLException e){
+            System.err.println(e.getMessage() + " --- setupDatabase");
+
+        } finally {
+        }
+    }
+
+    public void initRoom() {
+        int roomNum = 30;
+
+
+//        + "roomTypeId int,\n"
+//                + "roomId int,\n"
+
+        for (int i = 0; i < roomNum; i++) {
+            int roomTypeId = i / 10 + 1;
+            int roomId = (i / 10 + 1) * 100 + i % 10 + 1;
+            String qu = "INSERT INTO ROOM VALUES("
+                    + roomTypeId+ ","
+                    + roomId
+                    + ")";
+            System.out.println(qu);
+            if (execAction(qu)) {
+                System.out.println("success");
+
+            }
+            else {
+                System.out.println("failed");
+            }
+        }
+
+
+    }
+
+
+    public void initRoomType() {
+        int roomTypeNum = 3;
+        String[] names = {"", "Single", "Double", "Suite"};
+        int[] prices = {0, 100, 200, 300};
+
+        for (int i = 1; i <= roomTypeNum; i++) {
+            String qu = "INSERT INTO ROOMTYPE VALUES("
+                    + "'" + names[i] + "',"
+                    + i + ","
+                    + prices[i]
+                    + ")";
+            System.out.println(qu);
+            if (execAction(qu)) {
+                System.out.println("success");
+
+            }
+            else {
+                System.out.println("failed");
+            }
+        }
+
+
+    }
+
+    public void setupCustomerTable() {
         String tableName = "CUSTOMER";
         try {
             stmt = conn.createStatement();
@@ -48,10 +148,75 @@ public class DatabaseHandler {
                         + "checkOutDate date,\n"
                         + "requirement varchar(200),\n"
                         + "isGone boolean default false,\n"
-                        + "primary key (name, checkInDate)"
+                        + "totalPrice int,\n"
+                        + "PRIMARY KEY (name, checkInDate),\n"
+                        + "FOREIGN KEY (roomId) REFERENCES ROOM(roomId)"
                         + ")"
 
                 );
+                System.out.println("Table " + tableName + " created");
+            }
+
+
+        } catch (SQLException e){
+            System.err.println(e.getMessage() + " --- setupDatabase");
+
+        } finally {
+        }
+    }
+    public void setupRoomTypeTable() {
+        String tableName = "ROOMTYPE";
+        try {
+            stmt = conn.createStatement();
+            DatabaseMetaData dbm = conn.getMetaData();
+            ResultSet tables =  dbm.getTables(null, null, tableName.toUpperCase(), null);
+
+
+            if (tables.next()) {
+                System.out.println("Table " + tableName + " already exists");
+
+            }
+            else {
+                stmt.execute("CREATE TABLE " + tableName + "("
+                        + "roomTypeName varchar(200),\n"
+                        + "roomTypeId int,\n"
+                        + "price int,\n"
+                        + "PRIMARY KEY (roomTypeId)"
+                        + ")"
+
+                );
+
+                System.out.println("Table " + tableName + " created");
+
+            }
+
+
+        } catch (SQLException e){
+            System.err.println(e.getMessage() + " --- setupDatabase");
+
+        } finally {
+        }
+    }
+    public void setupRoomTable() {
+        String tableName = "ROOM";
+        try {
+            stmt = conn.createStatement();
+            DatabaseMetaData dbm = conn.getMetaData();
+            ResultSet tables =  dbm.getTables(null, null, tableName.toUpperCase(), null);
+
+            if (tables.next()) {
+                System.out.println("Table " + tableName + " already exists");
+            }
+            else {
+                stmt.execute("CREATE TABLE " + tableName + "("
+                        + "roomTypeId int,\n"
+                        + "roomId int,\n"
+                        + "PRIMARY KEY (roomId),\n"
+                        + "FOREIGN KEY (roomTypeId) REFERENCES ROOMTYPE (roomTypeId)"
+                        + ")"
+
+                );
+                System.out.println("Table " + tableName + " created");
             }
 
 
@@ -95,4 +260,3 @@ public class DatabaseHandler {
 
 
 }
-

@@ -16,7 +16,10 @@ import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class addGuestController implements Initializable{
 
@@ -44,7 +47,7 @@ public class addGuestController implements Initializable{
     private JFXTextField guest_name;
 
     @FXML
-    private JFXTextField Total_price;
+    private Text priceText;
 
     @FXML
     private JFXButton Total_price_button;
@@ -58,6 +61,66 @@ public class addGuestController implements Initializable{
 
     @FXML
     void Show_total_price(ActionEvent event) {
+        int totalPrice = calculateTotalPrice();
+        System.out.println(totalPrice);
+        if (totalPrice == 0) {
+            priceText.setText("$?");
+            return;
+        }
+        priceText.setText("$" + totalPrice);
+
+    }
+
+    int calculateDateInterval(String d1, String d2) throws Exception {
+        SimpleDateFormat formatter1 = new SimpleDateFormat("yyyy-MM-dd");
+        Date date1 = formatter1.parse(d1);
+        Date date2 = formatter1.parse(d2);
+        long difference =  (date2.getTime()-date1.getTime())/86400000;
+        if (difference <= 0) {
+            throw new Exception();
+        }
+        return (int) Math.abs(difference);
+
+    }
+
+    int calculateTotalPrice() {
+        String roomId = room_number.getText();
+        String checkInDate = check_in_date.getText();
+        String checkOutDate = check_out_date.getText();
+        int oneDayPrice = 0;
+        int dayInterval = 0;
+
+        if (checkInDate.isEmpty() || checkOutDate.isEmpty() || roomId.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Please Enter Room Number, Check-in Date, and Check-out Date");
+            alert.showAndWait();
+            return 0;
+        }
+
+
+        String qu = "SELECT price FROM ROOMTYPE, ROOM WHERE " +
+                "ROOM.roomTypeId = ROOMTYPE.roomTypeId " +
+                "AND ROOM.roomId = " + roomId;
+        ResultSet rs = databaseHandler.execQuery(qu);
+        try {
+            while (rs.next()) {
+                oneDayPrice = rs.getInt("price");
+            }
+        } catch (SQLException ex){
+            Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+        try {
+            dayInterval = calculateDateInterval(checkInDate, checkOutDate);
+        } catch (Exception ex){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Invalid Date Format");
+            alert.showAndWait();
+        }
+
+        return oneDayPrice * dayInterval;
 
     }
 
@@ -68,7 +131,8 @@ public class addGuestController implements Initializable{
         String checkInDate = check_in_date.getText();
         String checkOutDate = check_out_date.getText();
         String requirement = requirements.getText();
-
+        int totalPrice = calculateTotalPrice();
+        priceText.setText("$" + totalPrice);
 
         if (name.isEmpty() || checkInDate.isEmpty() || checkOutDate.isEmpty() || roomId.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -84,7 +148,8 @@ public class addGuestController implements Initializable{
                 + "'" + checkInDate + "',"
                 + "'" + checkOutDate + "',"
                 + "'" + requirement + "',"
-                + "'" + "false" + "'"
+                + "'" + "false" + "',"
+                + totalPrice
                 + ")";
         System.out.println(qu);
 

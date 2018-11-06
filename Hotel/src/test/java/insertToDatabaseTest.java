@@ -37,6 +37,7 @@ public class insertToDatabaseTest {
         String checkInDate = "2012-12-12";
         String checkOutDate = "2012-12-13";
         String requirement = "burger";
+        String totalPrice = "100";
 
 
         String qu = "INSERT INTO CUSTOMER VALUES("
@@ -45,7 +46,8 @@ public class insertToDatabaseTest {
                 + "'" + checkInDate + "',"
                 + "'" + checkOutDate + "',"
                 + "'" + requirement + "',"
-                + "'" + "false" + "'"
+                + "'" + "false" + ",'"
+                + totalPrice
                 + ")";
 
         assertEquals(true, databaseHandler.execAction(qu));
@@ -66,6 +68,7 @@ public class insertToDatabaseTest {
         String checkInDate = "2012-12-12";
         String checkOutDate = "2012-12-13";
         String requirement = "burger";
+        String totalPrice = "100";
 
 
         String qu = "INSERT INTO CUSTOMER VALUES("
@@ -74,7 +77,8 @@ public class insertToDatabaseTest {
                 + "'" + checkInDate + "',"
                 + "'" + checkOutDate + "',"
                 + "'" + requirement + "',"
-                + "'" + "false" + "'"
+                + "'" + "false" + ",'"
+                + totalPrice
                 + ")";
 
         assertEquals(false, databaseHandler.execAction(qu));
@@ -94,6 +98,7 @@ public class insertToDatabaseTest {
         String checkInDate = "2012.12.12";
         String checkOutDate = "2012-12-13";
         String requirement = "burger";
+        String totalPrice = "100";
 
 
         String qu = "INSERT INTO CUSTOMER VALUES("
@@ -102,7 +107,8 @@ public class insertToDatabaseTest {
                 + "'" + checkInDate + "',"
                 + "'" + checkOutDate + "',"
                 + "'" + requirement + "',"
-                + "'" + "false" + "'"
+                + "'" + "false" + "',"
+                + totalPrice
                 + ")";
 
         assertEquals(false, databaseHandler.execAction(qu));
