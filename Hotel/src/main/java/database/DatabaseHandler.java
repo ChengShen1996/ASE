@@ -1,9 +1,13 @@
 package database;
 
+import CheckIn.addGuestController;
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 
 import javax.swing.*;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by jeremyjiang on 10/27/18.
@@ -33,7 +37,7 @@ public class DatabaseHandler {
     }
 
     public void setupTable() {
-        dropTable();
+        //dropTable();
         setupRoomTypeTable();
         setupRoomTable();
         setupCustomerTable();
@@ -226,6 +230,36 @@ public class DatabaseHandler {
 
         } finally {
         }
+    }
+
+    public void checkData() {
+        String qu = "SELECT * FROM CUSTOMER";
+        ResultSet rs = execQuery(qu);
+
+        System.out.println("***************** check customer table *****************");
+        try {
+            while (rs.next()) {
+                String name = rs.getString("name");
+                int roomId = rs.getInt("roomId");
+                String checkInDate = rs.getString("checkInDate");
+                String checkOutDate = rs.getString("checkOutDate");
+                String requirement = rs.getString("requirement");
+                boolean isGone = rs.getBoolean("isGone");
+                int totalPrice = rs.getInt("totalPrice");
+
+                System.out.println(name + ","
+                        + roomId + ","
+                        + checkInDate + ","
+                        + checkOutDate + ","
+                        + requirement + ","
+                        + isGone + ","
+                        + totalPrice);
+            }
+
+        } catch (SQLException ex){
+            Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     public ResultSet execQuery(String query) {

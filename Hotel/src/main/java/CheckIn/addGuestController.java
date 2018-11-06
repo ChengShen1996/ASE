@@ -168,7 +168,7 @@ public class addGuestController implements Initializable{
             alert.showAndWait();
 
         }
-        checkData();
+        databaseHandler.checkData();
     }
 
 
@@ -177,33 +177,6 @@ public class addGuestController implements Initializable{
         Stage stage = (Stage) rootPane.getScene().getWindow();
         stage.close();
     }
-
-    @FXML
-    private void checkData() {
-        String qu = "SELECT * FROM CUSTOMER";
-        ResultSet rs = databaseHandler.execQuery(qu);
-        try {
-
-            while (rs.next()) {
-                String name = rs.getString("name");
-                int roomId = rs.getInt("roomId");
-                String checkInDate = rs.getString("checkInDate");
-                String checkOutDate = rs.getString("checkOutDate");;
-                boolean isGone = rs.getBoolean("isGone");
-                System.out.println(name + " " + roomId + " " + checkInDate + " " + checkOutDate + " " +  isGone);
-
-
-            }
-
-        } catch (SQLException ex){
-            Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-
-
-    }
-
-
 
 }
 

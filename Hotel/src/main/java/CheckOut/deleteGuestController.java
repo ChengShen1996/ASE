@@ -43,10 +43,28 @@ public class deleteGuestController implements Initializable {
 
     @FXML
     void CheckOutGuest(ActionEvent event) {
-        System.out.println("here");
         String name = check_out_guest_name.getText();
         String roomId = check_out_room_number.getText();
 
+        String qu1 = "SELECT COUNT(*) AS total FROM CUSTOMER WHERE roomId = " + roomId
+                + " AND name = '" + name + "'";
+//        System.out.println(qu1);
+        ResultSet rs = databaseHandler.execQuery(qu1);
+        try {
+            while (rs.next()) {
+                int total = rs.getInt("total");
+                if (total == 0) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Guest and Room Not Found");
+                    alert.showAndWait();
+                    return;
+                }
+            }
+
+        } catch (SQLException ex){
+            Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
 
         if (name.isEmpty() ||  roomId.isEmpty()) {
@@ -56,6 +74,7 @@ public class deleteGuestController implements Initializable {
             alert.showAndWait();
             return;
         }
+
 
         String qu = "UPDATE Customer "
                 + "SET isGone = true "
@@ -78,7 +97,7 @@ public class deleteGuestController implements Initializable {
             alert.showAndWait();
 
         }
-
+        databaseHandler.checkData();
 
     }
 
@@ -89,25 +108,7 @@ public class deleteGuestController implements Initializable {
 
     }
 
-    @FXML
-    private void checkData() {
-        String qu = "SELECT * FROM CUSTOMER";
-        ResultSet rs = databaseHandler.execQuery(qu);
-        try {
-            while (rs.next()) {
-                String name = rs.getString("name");
-                int roomId = rs.getInt("roomId");
-                String checkInDate = rs.getString("checkInDate");
-                String checkOutDate = rs.getString("checkOutDate");;
-                boolean isGone = rs.getBoolean("isGone");
-                System.out.println(name + " " + roomId + " " + checkInDate + " " + checkOutDate + " " +  isGone);
-            }
 
-        } catch (SQLException ex){
-            Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }
 
 }
 
