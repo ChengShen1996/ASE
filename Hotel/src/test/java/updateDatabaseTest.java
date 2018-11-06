@@ -15,10 +15,11 @@ public class updateDatabaseTest {
 
 
         String name = "test-name1";
-        String roomId = "1";
+        String roomId = "101";
         String checkInDate = "2012-12-12";
         String checkOutDate = "2012-12-13";
         String requirement = "burger";
+        String totalPrice = "100";
 
         String qu = "INSERT INTO CUSTOMER VALUES("
                 + "'" + name + "',"
@@ -26,7 +27,8 @@ public class updateDatabaseTest {
                 + "'" + checkInDate + "',"
                 + "'" + checkOutDate + "',"
                 + "'" + requirement + "',"
-                + "'" + "false" + "'"
+                + "'" + "false" + "',"
+                + totalPrice
                 + ")";
         databaseHandler.execAction(qu);
         String qu_update = "UPDATE Customer "

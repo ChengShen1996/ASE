@@ -66,7 +66,7 @@ public class insertToDatabaseTest {
 
 
         String name = "test-name1";
-        String roomId = "t1";
+        String roomId = "1";
         String checkInDate = "2012-12-12";
         String checkOutDate = "2012-12-13";
         String requirement = "burger";
@@ -96,7 +96,7 @@ public class insertToDatabaseTest {
 
 
         String name = "test-name1";
-        String roomId = "1";
+        String roomId = "101";
         String checkInDate = "2012.12.12";
         String checkOutDate = "2012-12-13";
         String requirement = "burger";
