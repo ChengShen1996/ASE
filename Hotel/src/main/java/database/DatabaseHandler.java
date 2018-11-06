@@ -33,6 +33,7 @@ public class DatabaseHandler {
     }
 
     public void setupTable() {
+        dropTable();
         setupRoomTypeTable();
         setupRoomTable();
         setupCustomerTable();
@@ -92,9 +93,8 @@ public class DatabaseHandler {
                     + roomTypeId+ ","
                     + roomId
                     + ")";
-            System.out.println(qu);
             if (execAction(qu)) {
-                System.out.println("success");
+                //System.out.println("success");
 
             }
             else {
@@ -119,7 +119,8 @@ public class DatabaseHandler {
                     + ")";
             System.out.println(qu);
             if (execAction(qu)) {
-                System.out.println("success");
+                //System.out.println("success");
+
 
             }
             else {

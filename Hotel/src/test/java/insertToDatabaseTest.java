@@ -33,12 +33,15 @@ public class insertToDatabaseTest {
 
 
         String name = "test-name1";
-        String roomId = "1";
+        String roomId = "101";
         String checkInDate = "2012-12-12";
         String checkOutDate = "2012-12-13";
         String requirement = "burger";
         String totalPrice = "100";
 
+        String qu0 = "DELETE from CUSTOMER WHERE " +
+                "name = '" + name + "' AND checkInDate = '" + checkInDate+"'";
+        databaseHandler.execAction(qu0);
 
         String qu = "INSERT INTO CUSTOMER VALUES("
                 + "'" + name + "',"
@@ -46,7 +49,7 @@ public class insertToDatabaseTest {
                 + "'" + checkInDate + "',"
                 + "'" + checkOutDate + "',"
                 + "'" + requirement + "',"
-                + "'" + "false" + ",'"
+                + "'" + "false" + "',"
                 + totalPrice
                 + ")";
 
@@ -54,7 +57,6 @@ public class insertToDatabaseTest {
         String qu2 = "DELETE from CUSTOMER WHERE " +
                 "name = '" + name + "' AND checkInDate = '" + checkInDate+"'";
         databaseHandler.execAction(qu2);
-
 
     }
     @Test
@@ -77,7 +79,7 @@ public class insertToDatabaseTest {
                 + "'" + checkInDate + "',"
                 + "'" + checkOutDate + "',"
                 + "'" + requirement + "',"
-                + "'" + "false" + ",'"
+                + "'" + "false" + "',"
                 + totalPrice
                 + ")";
 
