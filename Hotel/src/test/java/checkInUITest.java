@@ -27,7 +27,7 @@ public class checkInUITest extends ApplicationTest {
         JFXTextField f1 = lookup("#requirements").query();
         JFXTextField f2 = lookup("#check_out_date").query();
         JFXTextField f3 = lookup("#guest_name").query();
-        JFXTextField f4 = lookup("#total_price").query();
+        //JFXTextField f4 = lookup("#total_price").query();
         JFXTextField f5 = lookup("#room_number").query();
         JFXTextField f6 = lookup("#check_in_date").query();
         JFXButton bt1 = lookup("#save_button").query();
@@ -35,7 +35,7 @@ public class checkInUITest extends ApplicationTest {
         assertEquals("Requirements", f1.getPromptText() );
         assertEquals("Check-out Date", f2.getPromptText() );
         assertEquals("Guest Name", f3.getPromptText() );
-        assertEquals("Total Price", f4.getPromptText() );
+        //assertEquals("Total Price", f4.getPromptText() );
         assertEquals("Room Number", f5.getPromptText() );
         assertEquals("Check-in Date", f6.getPromptText() );
         assertThat(bt1).hasText("Save");

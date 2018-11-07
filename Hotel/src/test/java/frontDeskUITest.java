@@ -24,11 +24,9 @@ public class frontDeskUITest extends ApplicationTest {
     @Test
     public void nametest() {
         Button bt1 = lookup("#front_desk_guest").query();
-        Button bt2 = lookup("#front_desk_room").query();
-        Button bt3 = lookup("#front_desk_recommend").query();
+        Button bt2 = lookup("#map").query();
         assertThat(bt1).hasText("Guest");
-        assertThat(bt2).hasText("Available Rooms");
-        assertThat(bt3).hasText("Recommendation");
+        assertThat(bt2).hasText("Map");
     }
 
 
