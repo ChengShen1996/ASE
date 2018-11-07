@@ -1,28 +1,66 @@
 package FrontDesk;
 
+import CheckIn.addGuestController;
 import Guest.GuestMenuController;
+import database.DatabaseHandler;
+import entity.Room;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class frontDeskMenuController {
+public class frontDeskMenuController implements Initializable {
+
+    DatabaseHandler databaseHandler;
+    ObservableList<Room> list = FXCollections.observableArrayList();
+    public void initialize(URL url, ResourceBundle rb){
+        databaseHandler = new DatabaseHandler();
+        initCol();
+
+    }
 
     @FXML
     private Button front_desk_guest;
 
     @FXML
-    private Button map;
+    private Button resetBtn;
 
+    @FXML
+    private Button okBtn;
+
+    @FXML
+    private TextField startDateText;
+
+    @FXML
+    private TextField endDateText;
+
+    @FXML
+    private TableView<Room>  tableView;
+
+    @FXML
+    private TableColumn<Room, Integer> roomIdCol;
+
+    @FXML
+    private TableColumn<Room, String> typeCol;
 
     @FXML
     void to_guestmenu(ActionEvent event) {
@@ -45,6 +83,76 @@ public class frontDeskMenuController {
             Logger.getLogger(frontDeskMenuController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    public void initCol() {
+        roomIdCol.setCellValueFactory(new PropertyValueFactory<>("roomId"));
+        typeCol.setCellValueFactory(new PropertyValueFactory<>("roomTypeName"));
+        tableView.getItems().clear();
+    }
+
+    @FXML
+    void show_availability(ActionEvent event) {
+        tableView.getItems().clear();
+        String fromDate = startDateText.getText();
+        String toDate = endDateText.getText();
+        SimpleDateFormat formatter1 = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date date1 = formatter1.parse(fromDate);
+            Date date2 = formatter1.parse(toDate);
+        }
+        catch(Exception ex) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Invalid Date Format");
+            alert.showAndWait();
+            return;
+
+        }
+        load_room();
+
+    }
+
+    void load_room() {
+        list.clear();
+        String fromDate = startDateText.getText();
+        String toDate = endDateText.getText();
+        String qu = "SELECT r.roomId, t.roomTypeName, t.price, t.roomTypeId FROM ROOM r, ROOMTYPE t " +
+                "WHERE r.roomTypeId = t.roomTypeId " +
+                "EXCEPT " +
+                "SELECT r.roomId, t.roomTypeName, t.price, t.roomTypeId FROM CUSTOMER c, ROOM r, ROOMTYPE t " +
+                "WHERE c.isGone = false AND " +
+                "c.roomId = r.roomId AND " +
+                "r.roomTypeId = t.roomTypeId AND (('"
+                + fromDate + "' BETWEEN c.checkInDate AND c.checkOutDate) OR ('"
+                + toDate + "' BETWEEN c.checkInDate AND c.checkOutDate))";
+
+        System.out.println(qu);
+        ResultSet rs = databaseHandler.execQuery(qu);
+
+        try {
+            while (rs.next()) {
+
+                int roomId = rs.getInt("roomId");
+                int price = rs.getInt("price");
+                int roomTypeId = rs.getInt("roomTypeId");
+                String roomTypeName = rs.getString("roomTypeName");
+
+                list.add(new Room(roomId, roomTypeId, price, roomTypeName));
+
+                System.out.println(roomId + ","
+                        + roomTypeName );
+            }
+
+        } catch (SQLException ex){
+            Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        tableView.getItems().addAll(list);
+    }
+
+
+
+
 }
 
 

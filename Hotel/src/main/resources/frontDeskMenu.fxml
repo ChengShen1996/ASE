@@ -66,12 +66,12 @@
                                  <top>
                                     <HBox prefHeight="74.0" prefWidth="631.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <JFXTextField labelFloat="true" prefHeight="27.0" prefWidth="179.0" promptText="start date">
+                                          <JFXTextField fx:id="startDateText" labelFloat="true" prefHeight="27.0" prefWidth="179.0" promptText="start date">
                                              <HBox.margin>
                                                 <Insets left="50.0" top="20.0" />
                                              </HBox.margin>
                                           </JFXTextField>
-                                          <JFXTextField labelFloat="true" prefHeight="27.0" prefWidth="183.0" promptText="end date">
+                                          <JFXTextField fx:id="endDateText" labelFloat="true" prefHeight="27.0" prefWidth="183.0" promptText="end date">
                                              <HBox.margin>
                                                 <Insets left="150.0" top="20.0" />
                                              </HBox.margin>
@@ -82,16 +82,16 @@
                                  <bottom>
                                     <HBox prefHeight="66.0" prefWidth="631.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <JFXButton alignment="CENTER" prefHeight="27.0" prefWidth="104.0" text="Reset" translateX="300.0" translateY="20.0" />
-                                          <JFXButton alignment="CENTER" prefHeight="27.0" prefWidth="116.0" text="OK" translateX="80.0" translateY="20.0" />
+                                          <JFXButton fx:id="resetBtn" alignment="CENTER" onAction="#initCol" prefHeight="27.0" prefWidth="104.0" text="Reset" translateX="300.0" translateY="20.0" />
+                                          <JFXButton fx:id="okBtn" alignment="CENTER" onAction="#show_availability" prefHeight="27.0" prefWidth="116.0" text="OK" translateX="80.0" translateY="20.0" />
                                        </children>
                                     </HBox>
                                  </bottom>
                                  <center>
-                                    <TableView prefHeight="200.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+                                    <TableView fx:id="tableView" prefHeight="200.0" prefWidth="315.0" BorderPane.alignment="CENTER">
                                       <columns>
-                                        <TableColumn prefWidth="315.0" text="Available Room" />
-                                        <TableColumn prefWidth="384.0" text="Room Type" />
+                                        <TableColumn fx:id="roomIdCol" prefWidth="315.0" text="Available Room" />
+                                        <TableColumn fx:id="typeCol" prefWidth="384.0" text="Room Type" />
                                       </columns>
                                     </TableView>
                                  </center>

@@ -41,8 +41,6 @@ public class DatabaseHandler {
         setupRoomTypeTable();
         setupRoomTable();
         setupCustomerTable();
-        initRoomType();
-        initRoom();
     }
 
     public void dropTable() {
@@ -105,6 +103,7 @@ public class DatabaseHandler {
                 System.out.println("failed");
             }
         }
+        System.out.println("Room table inited");
 
 
     }
@@ -131,7 +130,7 @@ public class DatabaseHandler {
                 System.out.println("failed");
             }
         }
-
+        System.out.println("RoomType table inited");
 
     }
 
@@ -192,6 +191,8 @@ public class DatabaseHandler {
                 );
 
                 System.out.println("Table " + tableName + " created");
+                initRoomType();
+
 
             }
 
@@ -222,6 +223,7 @@ public class DatabaseHandler {
 
                 );
                 System.out.println("Table " + tableName + " created");
+                initRoom();
             }
 
 
