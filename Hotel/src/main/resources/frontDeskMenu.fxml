@@ -99,9 +99,19 @@
                            </children></AnchorPane>
                      </content>
                   </Tab>
-                <Tab text="Restaurants">
+                <Tab fx:id="restaurant_tab" onSelectionChanged="#loadRestaurant" text="Restaurants">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane fx:id="yelp_table" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="yelptable" layoutX="14.0" layoutY="14.0" prefHeight="586.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="thumbnail_col" prefWidth="143.0" text="thumbnail" />
+                                  <TableColumn fx:id="name_col" minWidth="0.0" prefWidth="138.0" text="name" />
+                                    <TableColumn fx:id="location_col" prefWidth="266.0" text="location" />
+                                    <TableColumn fx:id="rating_col" prefWidth="83.0" text="rating" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
                   </content>
                 </Tab>
                 <Tab text="Transportation">
