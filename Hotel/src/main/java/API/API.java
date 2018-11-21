@@ -55,8 +55,8 @@ public class API {
             name[i] = curr.getString("name");
             rating[i] = Double.toString(curr.getDouble("rating"));
             JSONObject location = curr.getJSONObject("location");
-            address[i] = location.getString("address1") + " "+
-                    location.getString("city") + " "+ location.getString("state") + " "+ location.get("zip_code");
+            address[i] = location.getString("address1") + ", "+
+                    location.getString("city") + ", "+ location.getString("state") + ", "+ location.get("zip_code");
         }
         List<String[]> res = new LinkedList<>();
         res.add(img_url);

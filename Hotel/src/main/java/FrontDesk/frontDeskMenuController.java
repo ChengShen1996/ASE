@@ -24,6 +24,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.image.Image;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -46,6 +47,9 @@ public class frontDeskMenuController implements Initializable {
         initCol();
 
     }
+    @FXML
+    private ImageView imageTest;
+
     @FXML
     private Tab restaurant_tab;
 
@@ -113,7 +117,7 @@ public class frontDeskMenuController implements Initializable {
     public void initCol() {
         roomIdCol.setCellValueFactory(new PropertyValueFactory<>("roomId"));
         typeCol.setCellValueFactory(new PropertyValueFactory<>("roomTypeName"));
-        thumbnail_col.setCellValueFactory(new PropertyValueFactory<>("img_url"));
+        thumbnail_col.setCellValueFactory(new PropertyValueFactory<>("image"));
         name_col.setCellValueFactory(new PropertyValueFactory<>("name"));
         location_col.setCellValueFactory(new PropertyValueFactory<>("location"));
         rating_col.setCellValueFactory(new PropertyValueFactory<>("rating"));
@@ -185,7 +189,7 @@ public class frontDeskMenuController implements Initializable {
         yelplist.clear();
         API yelpApi = new API();
         String term = "restaurants", location = "NYC";
-        int limit = 2;
+        int limit = 10;
         try{
             List<String[]> restaurantList = yelpApi.Get_yelp(term,location,limit);
             String[] img_urls = restaurantList.get(0);
@@ -193,10 +197,17 @@ public class frontDeskMenuController implements Initializable {
             String[] address = restaurantList.get(2);
             String[] rating = restaurantList.get(3);
 
+
+
             for (int i = 0; i < limit; i++) {
-                Image img = new Image(img_urls[i]);
-//                ImageView imgView = new ImageView(img);
-                yelplist.add(new Restaurant(new ImageView(img), names[i], address[i], rating[i]));
+                String imageSource = img_urls[i];
+
+                Image thumbnail = new Image(imageSource);
+                ImageView imageView = new ImageView();
+                imageView.setImage(thumbnail);
+                imageView.setFitHeight(95);
+                imageView.setFitWidth(95);
+                yelplist.add(new Restaurant(imageView, names[i], address[i], rating[i]));
             }
         }catch (Exception e){
             e.printStackTrace();
