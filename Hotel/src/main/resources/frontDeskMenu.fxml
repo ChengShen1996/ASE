@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.image.*?>
@@ -10,118 +11,232 @@
 <?import javafx.scene.layout.*?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FrontDesk.frontDeskMenuController">
-   <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0">
-         <top>
-            <MenuBar BorderPane.alignment="CENTER">
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-         </top>
-         <right>
-            <VBox prefHeight="503.0" prefWidth="170.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button fx:id="front_desk_guest" contentDisplay="TOP" mnemonicParsing="false" onAction="#to_guestmenu" prefHeight="309.5" prefWidth="170.0" text="Guest">
-                     <graphic>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Image/add_member.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="map" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#show_map" prefHeight="309.5" prefWidth="170.0" text="Map">
-                     <graphic>
-                        <ImageView fitHeight="37.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@map.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-               </children>
-            </VBox>
-         </right>
-         <center>
-            <TabPane prefHeight="503.0" prefWidth="602.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-              <tabs>
-                  <Tab text="Available Rooms">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <BorderPane prefHeight="475.0" prefWidth="571.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <top>
-                                    <HBox prefHeight="74.0" prefWidth="631.0" BorderPane.alignment="CENTER">
-                                       <children>
-                                          <JFXTextField fx:id="startDateText" labelFloat="true" prefHeight="27.0" prefWidth="179.0" promptText="start date">
-                                             <HBox.margin>
-                                                <Insets left="50.0" top="20.0" />
-                                             </HBox.margin>
-                                          </JFXTextField>
-                                          <JFXTextField fx:id="endDateText" labelFloat="true" prefHeight="27.0" prefWidth="183.0" promptText="end date">
-                                             <HBox.margin>
-                                                <Insets left="150.0" top="20.0" />
-                                             </HBox.margin>
-                                          </JFXTextField>
-                                       </children>
-                                    </HBox>
-                                 </top>
-                                 <bottom>
-                                    <HBox prefHeight="66.0" prefWidth="631.0" BorderPane.alignment="CENTER">
-                                       <children>
-                                          <JFXButton fx:id="resetBtn" alignment="CENTER" onAction="#initCol" prefHeight="27.0" prefWidth="104.0" text="Reset" translateX="300.0" translateY="20.0" />
-                                          <JFXButton fx:id="okBtn" alignment="CENTER" onAction="#show_availability" prefHeight="27.0" prefWidth="116.0" text="OK" translateX="80.0" translateY="20.0" />
-                                       </children>
-                                    </HBox>
-                                 </bottom>
-                                 <center>
-                                    <TableView fx:id="tableView" prefHeight="200.0" prefWidth="315.0" BorderPane.alignment="CENTER">
-                                      <columns>
-                                        <TableColumn fx:id="roomIdCol" prefWidth="315.0" text="Available Room" />
-                                        <TableColumn fx:id="typeCol" prefWidth="384.0" text="Room Type" />
-                                      </columns>
-                                    </TableView>
-                                 </center>
-                              </BorderPane>
-                           </children></AnchorPane>
-                     </content>
-                  </Tab>
-                <Tab fx:id="restaurant_tab" onSelectionChanged="#loadRestaurant" text="Restaurants">
-                  <content>
-                    <AnchorPane fx:id="yelp_table" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <TableView fx:id="yelptable" layoutX="6.0" layoutY="172.0" prefHeight="586.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <columns>
-                                  <TableColumn fx:id="thumbnail_col" prefWidth="106.0" text="thumbnail" />
-                                  <TableColumn fx:id="name_col" minWidth="0.0" prefWidth="175.0" text="name" />
-                                    <TableColumn fx:id="location_col" prefWidth="266.0" text="location" />
-                                    <TableColumn fx:id="rating_col" prefWidth="83.0" text="rating" />
-                                </columns>
-                              </TableView>
-                           </children></AnchorPane>
-                  </content>
-                </Tab>
-                <Tab text="Transportation">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </Tab>
-              </tabs>
-            </TabPane>
-         </center>
-      </BorderPane>
-   </children>
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <right>
+                <VBox prefHeight="503.0" prefWidth="170.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="front_desk_guest" contentDisplay="TOP" mnemonicParsing="false" onAction="#to_guestmenu" prefHeight="309.5" prefWidth="170.0" text="Guest">
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Image/add_member.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <Button fx:id="map" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#show_map" prefHeight="309.5" prefWidth="170.0" text="Map">
+                            <graphic>
+                                <ImageView fitHeight="37.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@map.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children>
+                </VBox>
+            </right>
+            <center>
+                <TabPane prefHeight="503.0" prefWidth="602.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab text="Available Rooms">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <BorderPane prefHeight="475.0" prefWidth="571.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <top>
+                                                <HBox prefHeight="74.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+                                                    <children>
+                                                        <JFXTextField fx:id="startDateText" labelFloat="true" prefHeight="27.0" prefWidth="179.0" promptText="start date">
+                                                            <HBox.margin>
+                                                                <Insets left="50.0" top="20.0" />
+                                                            </HBox.margin>
+                                                        </JFXTextField>
+                                                        <JFXTextField fx:id="endDateText" labelFloat="true" prefHeight="27.0" prefWidth="183.0" promptText="end date">
+                                                            <HBox.margin>
+                                                                <Insets left="150.0" top="20.0" />
+                                                            </HBox.margin>
+                                                        </JFXTextField>
+                                                    </children>
+                                                </HBox>
+                                            </top>
+                                            <bottom>
+                                                <HBox prefHeight="66.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+                                                    <children>
+                                                        <JFXButton fx:id="resetBtn" alignment="CENTER" onAction="#initCol" prefHeight="27.0" prefWidth="104.0" text="Reset" translateX="300.0" translateY="20.0" />
+                                                        <JFXButton fx:id="okBtn" alignment="CENTER" onAction="#show_availability" prefHeight="27.0" prefWidth="116.0" text="OK" translateX="80.0" translateY="20.0" />
+                                                    </children>
+                                                </HBox>
+                                            </bottom>
+                                            <center>
+                                                <TableView fx:id="tableView" prefHeight="200.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+                                                    <columns>
+                                                        <TableColumn fx:id="roomIdCol" prefWidth="315.0" text="Available Room" />
+                                                        <TableColumn fx:id="typeCol" prefWidth="384.0" text="Room Type" />
+                                                    </columns>
+                                                </TableView>
+                                            </center>
+                                        </BorderPane>
+                                    </children></AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Guest Information">
+                            <content>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <BorderPane prefHeight="586.0" prefWidth="681.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <top>
+                                                <HBox prefHeight="74.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+                                                    <children>
+                                                        <JFXTextField fx:id="Guest_info_name" labelFloat="true" prefHeight="27.0" prefWidth="179.0" promptText="Name">
+                                                            <HBox.margin>
+                                                                <Insets left="50.0" top="20.0" />
+                                                            </HBox.margin>
+                                                        </JFXTextField>
+                                                        <JFXTextField fx:id="Guest_info_date" labelFloat="true" prefHeight="27.0" prefWidth="183.0" promptText="Check In Date">
+                                                            <HBox.margin>
+                                                                <Insets left="150.0" top="20.0" />
+                                                            </HBox.margin>
+                                                        </JFXTextField>
+                                                    </children>
+                                                </HBox>
+                                            </top>
+                                            <bottom>
+                                                <HBox prefHeight="66.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+                                                    <children>
+                                                        <JFXButton fx:id="guest_info_Reset" alignment="CENTER" onAction="#Guest_info_initCol" prefHeight="27.0" prefWidth="104.0" text="Reset" translateX="300.0" translateY="20.0" />
+                                                        <JFXButton fx:id="guest_info_OK" alignment="CENTER" onAction="#show_guest" prefHeight="27.0" prefWidth="116.0" text="OK" translateX="80.0" translateY="20.0" />
+                                                    </children>
+                                                </HBox>
+                                            </bottom>
+                                            <left>
+                                                <VBox prefHeight="446.0" prefWidth="271.0" BorderPane.alignment="CENTER">
+                                                    <children>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" translateX="150.0" translateY="50.0" wrappingWidth="67.2060546875">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room #" translateX="150.0" translateY="90.0" wrappingWidth="67.2060546875">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text layoutX="10.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check in date" translateX="150.0" translateY="130.0" wrappingWidth="116.2060546875">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text layoutX="10.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check out date" translateX="150.0" translateY="170.0" wrappingWidth="113.2060546875">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text layoutX="10.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price" translateX="150.0" translateY="210.0" wrappingWidth="107.2060546875">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                        <Text layoutX="10.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requirement" translateX="150.0" translateY="250.0" wrappingWidth="112.2060546875">
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                </VBox>
+                                            </left>
+                                            <right>
+                                                <VBox prefHeight="446.0" prefWidth="339.0" BorderPane.alignment="CENTER">
+                                                    <children>
+                                                        <JFXTextField fx:id="guest_name" translateY="40.0">
+                                                            <VBox.margin>
+                                                                <Insets right="200.0" />
+                                                            </VBox.margin>
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </JFXTextField>
+                                                        <JFXTextField fx:id="guest_room" layoutX="10.0" layoutY="10.0" translateY="70.0">
+                                                            <VBox.margin>
+                                                                <Insets right="200.0" />
+                                                            </VBox.margin>
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </JFXTextField>
+                                                        <JFXTextField fx:id="guest_check_in" translateY="100.0">
+                                                            <VBox.margin>
+                                                                <Insets right="200.0" />
+                                                            </VBox.margin>
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </JFXTextField>
+                                                        <JFXTextField fx:id="guest_check_out" layoutX="10.0" layoutY="64.0" translateY="130.0">
+                                                            <VBox.margin>
+                                                                <Insets right="200.0" />
+                                                            </VBox.margin>
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </JFXTextField>
+                                                        <JFXTextField fx:id="guest_total_price" layoutX="10.0" layoutY="91.0" translateY="160.0">
+                                                            <VBox.margin>
+                                                                <Insets right="200.0" />
+                                                            </VBox.margin>
+                                                            <font>
+                                                                <Font size="15.0" />
+                                                            </font>
+                                                        </JFXTextField>
+                                                        <JFXTextArea fx:id="guest_requirement" prefHeight="74.0" prefWidth="279.0" translateY="190.0">
+                                                            <VBox.margin>
+                                                                <Insets right="60.0" />
+                                                            </VBox.margin>
+                                                            <font>
+                                                                <Font size="12.0" />
+                                                            </font>
+                                                        </JFXTextArea>
+                                                    </children>
+                                                </VBox>
+                                            </right>
+                                        </BorderPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Restaurants">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                        </Tab>
+                        <Tab text="Transportation">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </children>
 </StackPane>

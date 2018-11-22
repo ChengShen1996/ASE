@@ -1,16 +1,12 @@
 package FrontDesk;
 
-import API.API;
 import CheckIn.addGuestController;
 import Guest.GuestMenuController;
 import database.DatabaseHandler;
-import entity.Restaurant;
 import entity.Room;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,19 +15,18 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.ImageViewBuilder;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.scene.image.Image;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.JFXTextArea;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -40,18 +35,11 @@ public class frontDeskMenuController implements Initializable {
 
     DatabaseHandler databaseHandler;
     ObservableList<Room> list = FXCollections.observableArrayList();
-    ObservableList<Restaurant> yelplist = FXCollections.observableArrayList();
-
     public void initialize(URL url, ResourceBundle rb){
         databaseHandler = new DatabaseHandler();
         initCol();
 
     }
-    @FXML
-    private ImageView imageTest;
-
-    @FXML
-    private Tab restaurant_tab;
 
     @FXML
     private Button front_desk_guest;
@@ -61,6 +49,12 @@ public class frontDeskMenuController implements Initializable {
 
     @FXML
     private Button okBtn;
+
+    @FXML
+    private JFXButton guest_info_Reset;
+
+    @FXML
+    private JFXButton guest_info_OK;
 
     @FXML
     private TextField startDateText;
@@ -78,19 +72,28 @@ public class frontDeskMenuController implements Initializable {
     private TableColumn<Room, String> typeCol;
 
     @FXML
-    private TableView<Restaurant> yelptable;
+    private JFXTextField Guest_info_name;
 
     @FXML
-    private TableColumn<Restaurant, ImageView> thumbnail_col;
+    private JFXTextField Guest_info_date;
 
     @FXML
-    private TableColumn<Restaurant,String> name_col;
+    private JFXTextField guest_name;
 
     @FXML
-    private TableColumn<Restaurant,String> rating_col;
+    private JFXTextArea guest_requirement;
 
     @FXML
-    private TableColumn<Restaurant,String> location_col;
+    private JFXTextField guest_room;
+
+    @FXML
+    private JFXTextField guest_check_in;
+
+    @FXML
+    private JFXTextField guest_check_out;
+
+    @FXML
+    private JFXTextField guest_total_price;
 
     @FXML
     void to_guestmenu(ActionEvent event) {
@@ -117,12 +120,7 @@ public class frontDeskMenuController implements Initializable {
     public void initCol() {
         roomIdCol.setCellValueFactory(new PropertyValueFactory<>("roomId"));
         typeCol.setCellValueFactory(new PropertyValueFactory<>("roomTypeName"));
-        thumbnail_col.setCellValueFactory(new PropertyValueFactory<>("image"));
-        name_col.setCellValueFactory(new PropertyValueFactory<>("name"));
-        location_col.setCellValueFactory(new PropertyValueFactory<>("location"));
-        rating_col.setCellValueFactory(new PropertyValueFactory<>("rating"));
         tableView.getItems().clear();
-        yelptable.getItems().clear();
     }
 
     @FXML
@@ -185,35 +183,48 @@ public class frontDeskMenuController implements Initializable {
         tableView.getItems().addAll(list);
     }
 
-    public void loadRestaurant() {
-        yelplist.clear();
-        API yelpApi = new API();
-        String term = "restaurants", location = "NYC";
-        int limit = 10;
-        try{
-            List<String[]> restaurantList = yelpApi.Get_yelp(term,location,limit);
-            String[] img_urls = restaurantList.get(0);
-            String[] names = restaurantList.get(1);
-            String[] address = restaurantList.get(2);
-            String[] rating = restaurantList.get(3);
 
 
+    @FXML
+    void Guest_info_initCol(ActionEvent event) {
+        guest_name.clear();
+        guest_room.clear();
+        guest_check_in.clear();
+        guest_check_out.clear();
+        guest_total_price.clear();
+        guest_requirement.clear();
+    }
 
-            for (int i = 0; i < limit; i++) {
-                String imageSource = img_urls[i];
+    @FXML
+    void show_guest(ActionEvent event) {
+        String name = Guest_info_name.getText();
+        String check_in = Guest_info_date.getText();
+        String qu = "SELECT c.name, c.roomId, c.CheckInDate, c.CheckOutDate, c.requirement " +
+                "FROM CUSTOMER c "; //+
+                //"WHERE c.name = '"+ name + "'";
+        //"' AND c.CheckInDate = '"+ check_in + "'
+        System.out.println(qu);
+        ResultSet rs = databaseHandler.execQuery(qu);
 
-                Image thumbnail = new Image(imageSource);
-                ImageView imageView = new ImageView();
-                imageView.setImage(thumbnail);
-                imageView.setFitHeight(95);
-                imageView.setFitWidth(95);
-                yelplist.add(new Restaurant(imageView, names[i], address[i], rating[i]));
+        try {
+            while (rs.next()){
+                String g_name = rs.getString("name");
+                String g_room = rs.getString("roomId");
+                String g_checkin = rs.getString("CheckInDate");
+                String g_checkout = rs.getString("CheckOutDate");
+                String g_req = rs.getString("requirement");
+                //String g_price = rs.getString("totalPrice");
+                System.out.println(g_name + " " + g_room + " " + g_checkin);
+                guest_name.setText(g_name);
+                guest_room.setText(g_room);
+                guest_check_in.setText(g_checkin);
+                guest_check_out.setText(g_checkout);
+                //uest_total_price.setText(g_price);
+                guest_requirement.setText(g_req);
             }
-        }catch (Exception e){
-            e.printStackTrace();
+        } catch (SQLException ex){
+            Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        yelptable.getItems().addAll(yelplist);
-
     }
 
 
