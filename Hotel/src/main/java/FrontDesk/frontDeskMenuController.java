@@ -78,22 +78,22 @@ public class frontDeskMenuController implements Initializable {
     private JFXTextField Guest_info_room;
 
     @FXML
-    private JFXTextField guest_name;
+    private TextField guest_name;
 
     @FXML
-    private JFXTextArea guest_requirement;
+    private TextArea guest_requirement;
 
     @FXML
-    private JFXTextField guest_room;
+    private TextField guest_room;
 
     @FXML
-    private JFXTextField guest_check_in;
+    private TextField guest_check_in;
 
     @FXML
-    private JFXTextField guest_check_out;
+    private TextField guest_check_out;
 
     @FXML
-    private JFXTextField guest_total_price;
+    private TextField guest_total_price;
 
     @FXML
     void to_guestmenu(ActionEvent event) {

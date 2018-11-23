@@ -168,54 +168,36 @@
                                             <right>
                                                 <VBox prefHeight="446.0" prefWidth="339.0" BorderPane.alignment="CENTER">
                                                     <children>
-                                                        <JFXTextField fx:id="guest_name" translateY="40.0">
-                                                            <VBox.margin>
-                                                                <Insets right="200.0" />
-                                                            </VBox.margin>
-                                                            <font>
-                                                                <Font size="15.0" />
-                                                            </font>
-                                                        </JFXTextField>
-                                                        <JFXTextField fx:id="guest_room" layoutX="10.0" layoutY="10.0" translateY="70.0">
-                                                            <VBox.margin>
-                                                                <Insets right="200.0" />
-                                                            </VBox.margin>
-                                                            <font>
-                                                                <Font size="15.0" />
-                                                            </font>
-                                                        </JFXTextField>
-                                                        <JFXTextField fx:id="guest_check_in" translateY="100.0">
-                                                            <VBox.margin>
-                                                                <Insets right="200.0" />
-                                                            </VBox.margin>
-                                                            <font>
-                                                                <Font size="15.0" />
-                                                            </font>
-                                                        </JFXTextField>
-                                                        <JFXTextField fx:id="guest_check_out" layoutX="10.0" layoutY="64.0" translateY="130.0">
-                                                            <VBox.margin>
-                                                                <Insets right="200.0" />
-                                                            </VBox.margin>
-                                                            <font>
-                                                                <Font size="15.0" />
-                                                            </font>
-                                                        </JFXTextField>
-                                                        <JFXTextField fx:id="guest_total_price" layoutX="10.0" layoutY="91.0" translateY="160.0">
-                                                            <VBox.margin>
-                                                                <Insets right="200.0" />
-                                                            </VBox.margin>
-                                                            <font>
-                                                                <Font size="15.0" />
-                                                            </font>
-                                                        </JFXTextField>
-                                                        <JFXTextArea fx:id="guest_requirement" prefHeight="74.0" prefWidth="279.0" translateY="190.0">
-                                                            <VBox.margin>
-                                                                <Insets right="60.0" />
-                                                            </VBox.margin>
-                                                            <font>
-                                                                <Font size="14.0" />
-                                                            </font>
-                                                        </JFXTextArea>
+                                          <TextField fx:id="guest_name" editable="false" translateY="45.0">
+                                             <VBox.margin>
+                                                <Insets right="180.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="guest_room" editable="false" translateY="75.0">
+                                             <VBox.margin>
+                                                <Insets right="180.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="guest_check_in" editable="false" translateY="110.0">
+                                             <VBox.margin>
+                                                <Insets right="180.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="guest_check_out" editable="false" translateY="140.0">
+                                             <VBox.margin>
+                                                <Insets right="180.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="guest_total_price" editable="false" translateY="170.0">
+                                             <VBox.margin>
+                                                <Insets right="180.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextArea fx:id="guest_requirement" editable="false" prefHeight="82.0" prefWidth="262.0" translateY="210.0">
+                                             <VBox.margin>
+                                                <Insets right="60.0" />
+                                             </VBox.margin>
+                                          </TextArea>
                                                     </children>
                                                 </VBox>
                                             </right>
