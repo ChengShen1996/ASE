@@ -198,10 +198,10 @@ public class frontDeskMenuController implements Initializable {
     @FXML
     void show_guest(ActionEvent event) {
         String name = Guest_info_name.getText();
-        //String room = Guest_info_room.getText();
+        int room = Integer.parseInt(Guest_info_room.getText());
         String qu = "SELECT c.name, c.roomId, c.CheckInDate, c.CheckOutDate, c.requirement, c.totalPrice " +
                 "FROM CUSTOMER c " +
-                "WHERE c.name = '" + name + "' ";//AND c.roomId = '" + room + "' ";
+                "WHERE c.name = '" + name + "' AND c.roomId = " + room + " ";
         System.out.println(qu);
         ResultSet rs = databaseHandler.execQuery(qu);
 
