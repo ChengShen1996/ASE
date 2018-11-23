@@ -75,7 +75,7 @@ public class frontDeskMenuController implements Initializable {
     private JFXTextField Guest_info_name;
 
     @FXML
-    private JFXTextField Guest_info_date;
+    private JFXTextField Guest_info_room;
 
     @FXML
     private JFXTextField guest_name;
@@ -198,11 +198,10 @@ public class frontDeskMenuController implements Initializable {
     @FXML
     void show_guest(ActionEvent event) {
         String name = Guest_info_name.getText();
-        String check_in = Guest_info_date.getText();
-        String qu = "SELECT c.name, c.roomId, c.CheckInDate, c.CheckOutDate, c.requirement " +
-                "FROM CUSTOMER c "; //+
-                //"WHERE c.name = '"+ name + "'";
-        //"' AND c.CheckInDate = '"+ check_in + "'
+        //String room = Guest_info_room.getText();
+        String qu = "SELECT c.name, c.roomId, c.CheckInDate, c.CheckOutDate, c.requirement, c.totalPrice " +
+                "FROM CUSTOMER c " +
+                "WHERE c.name = '" + name + "' ";//AND c.roomId = '" + room + "' ";
         System.out.println(qu);
         ResultSet rs = databaseHandler.execQuery(qu);
 
@@ -213,13 +212,13 @@ public class frontDeskMenuController implements Initializable {
                 String g_checkin = rs.getString("CheckInDate");
                 String g_checkout = rs.getString("CheckOutDate");
                 String g_req = rs.getString("requirement");
-                //String g_price = rs.getString("totalPrice");
+                int g_price = rs.getInt("totalPrice");
                 System.out.println(g_name + " " + g_room + " " + g_checkin);
                 guest_name.setText(g_name);
                 guest_room.setText(g_room);
                 guest_check_in.setText(g_checkin);
                 guest_check_out.setText(g_checkout);
-                //uest_total_price.setText(g_price);
+                guest_total_price.setText(String.valueOf(g_price));
                 guest_requirement.setText(g_req);
             }
         } catch (SQLException ex){

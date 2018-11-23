@@ -3,13 +3,41 @@
   <component name="ChangeListManager">
     <list default="true" id="ba597540-35a7-4400-b9a9-0fbf7216fd7d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cc80.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cc80.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cc91.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cc91.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c101.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c111.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c121.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c130.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c141.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c150.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c150.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c161.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c161.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c171.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c171.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c200.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c200.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c211.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c211.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c221.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c221.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c41.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c490.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c4a1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c60.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c71.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c81.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c820.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c831.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c840.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c851.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c861.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c90.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/ca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/cb1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/cf0.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Hotel/target/" />
@@ -49,14 +77,14 @@
       <usages-collector id="statistics.spring.boot.run.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="113" />
+          <entry key="JAVA" value="275" />
           <entry key="XML" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="12" />
-          <entry key="java" value="113" />
+          <entry key="java" value="275" />
         </counts>
       </usages-collector>
     </session>
@@ -65,31 +93,17 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2074" />
+          </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/database/DatabaseHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1838">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="222" column="49" selection-start-line="222" selection-start-column="49" selection-end-line="222" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2229#2230#0" expanded="true" />
-                <element signature="e#2287#2288#0" expanded="true" />
-                <element signature="e#2337#2338#0" expanded="true" />
-                <element signature="e#2387#2388#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="901">
+              <caret line="258" column="13" selection-start-line="258" selection-start-column="13" selection-end-line="258" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -97,8 +111,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/CheckIn/addGuestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-142">
-              <caret line="90" column="28" lean-forward="true" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+            <state relative-caret-position="228">
+              <caret line="150" column="38" selection-start-line="150" selection-start-column="38" selection-end-line="150" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="203" column="49" selection-start-line="203" selection-start-column="49" selection-end-line="203" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2229#2230#0" expanded="true" />
+                <element signature="e#2287#2288#0" expanded="true" />
+                <element signature="e#2337#2338#0" expanded="true" />
+                <element signature="e#2387#2388#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,8 +153,8 @@
         <option value="$PROJECT_DIR$/Hotel/src/main/java/Map/showMap.fxml" />
         <option value="$PROJECT_DIR$/Hotel/src/main/java/Map/map.java" />
         <option value="$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml" />
-        <option value="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" />
         <option value="$PROJECT_DIR$/Hotel/src/main/java/database/DatabaseHandler.java" />
+        <option value="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" />
       </list>
     </option>
   </component>
@@ -141,6 +171,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="64" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="773" />
@@ -232,7 +263,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542926310938" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542941298252" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -361,10 +392,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7579000" />
+    <option name="totallyTimeSpent" value="10087000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <frame x="64" y="23" width="1280" height="773" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -380,7 +421,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.34801763" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
@@ -462,27 +503,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/CheckIn/addGuestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="90" column="28" lean-forward="true" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
-        </state>
+        <state relative-caret-position="-2074" />
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/database/DatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1838">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="901">
+          <caret line="258" column="13" selection-start-line="258" selection-start-column="13" selection-end-line="258" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/CheckIn/addGuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="150" column="38" selection-start-line="150" selection-start-column="38" selection-end-line="150" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="222" column="49" selection-start-line="222" selection-start-column="49" selection-end-line="222" selection-end-column="49" />
+        <state relative-caret-position="61">
+          <caret line="203" column="49" selection-start-line="203" selection-start-column="49" selection-end-line="203" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2229#2230#0" expanded="true" />
