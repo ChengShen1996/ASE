@@ -1,12 +1,15 @@
 package FrontDesk;
 
+import API.API;
 import CheckIn.addGuestController;
 import Guest.GuestMenuController;
 import database.DatabaseHandler;
+import entity.Restaurant;
 import entity.Room;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,18 +18,23 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.ImageViewBuilder;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.scene.image.Image;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTextArea;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,11 +43,18 @@ public class frontDeskMenuController implements Initializable {
 
     DatabaseHandler databaseHandler;
     ObservableList<Room> list = FXCollections.observableArrayList();
+    ObservableList<Restaurant> yelplist = FXCollections.observableArrayList();
     public void initialize(URL url, ResourceBundle rb){
         databaseHandler = new DatabaseHandler();
         initCol();
-
+        recommend_type.getItems().addAll("restaurants");
     }
+
+    @FXML
+    private ImageView imageTest;
+
+    @FXML
+    private Tab recommendation_tab;
 
     @FXML
     private Button front_desk_guest;
@@ -94,6 +109,27 @@ public class frontDeskMenuController implements Initializable {
 
     @FXML
     private TextField guest_total_price;
+
+    @FXML
+    private TableView<Restaurant> yelptable;
+
+    @FXML
+    private TableColumn<Restaurant, ImageView> thumbnail_col;
+
+    @FXML
+    private TableColumn<Restaurant,String> name_col;
+
+    @FXML
+    private TableColumn<Restaurant,String> rating_col;
+
+    @FXML
+    private TableColumn<Restaurant,String> location_col;
+
+    @FXML
+    private ComboBox<String> recommend_type;
+
+
+
 
     @FXML
     void to_guestmenu(ActionEvent event) {
@@ -226,6 +262,43 @@ public class frontDeskMenuController implements Initializable {
         }
     }
 
+
+    public void loadyelp() {
+        yelplist.clear();
+        API yelpApi = new API();
+        String term = recommend_type.getValue();
+        String location = "NYC";
+        int limit = 10;
+        try{
+            List<String[]> restaurantList = yelpApi.Get_yelp(term,location,limit);
+            String[] img_urls = restaurantList.get(0);
+            String[] names = restaurantList.get(1);
+            String[] address = restaurantList.get(2);
+            String[] rating = restaurantList.get(3);
+
+
+
+            for (int i = 0; i < limit; i++) {
+                String imageSource = img_urls[i];
+
+                Image thumbnail = new Image(imageSource);
+                ImageView imageView = new ImageView();
+                imageView.setImage(thumbnail);
+                imageView.setFitHeight(95);
+                imageView.setFitWidth(95);
+                yelplist.add(new Restaurant(imageView, names[i], address[i], rating[i]));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        yelptable.getItems().addAll(yelplist);
+
+    }
+
+    @FXML
+    void reset_yelp_table(ActionEvent event) {
+
+    }
 
 }
 
