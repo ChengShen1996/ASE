@@ -37,19 +37,11 @@
             <right>
                 <VBox prefHeight="503.0" prefWidth="170.0" BorderPane.alignment="CENTER">
                     <children>
-                        <Button fx:id="front_desk_guest" contentDisplay="TOP" mnemonicParsing="false" onAction="#to_guestmenu" prefHeight="309.5" prefWidth="170.0" text="Guest">
+                        <Button fx:id="front_desk_guest" contentDisplay="TOP" mnemonicParsing="false" onAction="#to_guestmenu" prefHeight="641.0" prefWidth="170.0" text="Guest">
                             <graphic>
                                 <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@Image/add_member.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic></Button>
-                        <Button fx:id="map" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#show_map" prefHeight="309.5" prefWidth="170.0" text="Map">
-                            <graphic>
-                                <ImageView fitHeight="37.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@map.png" />
                                     </image>
                                 </ImageView>
                             </graphic></Button>
@@ -206,14 +198,38 @@
                                 </AnchorPane>
                             </content>
                         </Tab>
-                        <Tab text="Restaurants">
+                        <Tab fx:id="recommendation_tab" text="Recommendation">
                             <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                            </content>
-                        </Tab>
-                        <Tab text="Transportation">
-                            <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="586.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <HBox prefHeight="39.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ComboBox fx:id="recommend_type" prefWidth="150.0" translateX="230.0" translateY="5.0" />
+                                       </children>
+                                    </HBox>
+                                 </top>
+                                 <bottom>
+                                    <HBox prefHeight="39.0" prefWidth="631.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton onAction="#loadyelp" prefHeight="40.0" prefWidth="145.0" text="Search" translateX="150.0" />
+                                          <JFXButton layoutX="10.0" layoutY="10.0" onAction="#reset_yelp_table" prefHeight="40.0" prefWidth="145.0" text="Reset" translateX="200.0" />
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                                 <center>
+                                    <TableView fx:id="yelptable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                      <columns>
+                                        <TableColumn fx:id="thumbnail_col" prefWidth="150.0" text="Image" />
+                                        <TableColumn fx:id="name_col" minWidth="0.0" prefWidth="158.0" text="Name" />
+                                          <TableColumn fx:id="rating_col" minWidth="0.0" prefWidth="116.0" text="Rating" />
+                                          <TableColumn fx:id="location_col" minWidth="0.0" prefWidth="206.0" text="Location" />
+                                      </columns>
+                                    </TableView>
+                                 </center>
+                              </BorderPane>
+                           </children></AnchorPane>
                             </content>
                         </Tab>
                     </tabs>
