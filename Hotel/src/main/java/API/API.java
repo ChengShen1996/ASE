@@ -13,11 +13,17 @@ import org.json.JSONObject;
 public class API {
     private final String YELP_USER_AGENT = "Bearer _BaNlKEH-hPFgh57xEqG6wD9Y7PXw0kkb8fsZrmmR-QRRA" +
             "KcejYX6UKqw5zfOcEUn4TVj36eMqK4g1uX6dQaBPKL8vf9A_b-ZaweGdTTwbRKfGSg3CSQQbHuuOHtW3Yx";
-    public List<String[]> Get_yelp(String term, String qlocation, int limit) throws Exception {
+    public List<String[]> Get_yelp(String term, String qlocation, String categories, int limit) throws Exception {
 
-        String url = "https://api.yelp.com/v3/businesses/search?term="+term+"&location="+qlocation
-                +"&limit="+Integer.toString(limit)+"&sort_by=rating";
-
+        String url = "";
+        if(categories == null){
+            url = "https://api.yelp.com/v3/businesses/search?term="+term+"&location="+qlocation
+                    +"&limit="+Integer.toString(limit)+"&sort_by=rating";
+        }
+        else{
+            url = "https://api.yelp.com/v3/businesses/search?term="+term+"&location="+qlocation
+                    +"&categories="+categories+"&limit="+Integer.toString(limit)+"&sort_by=rating";
+        }
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 

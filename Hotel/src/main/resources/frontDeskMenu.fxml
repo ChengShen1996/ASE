@@ -206,8 +206,10 @@
                                  <top>
                                     <HBox prefHeight="39.0" prefWidth="631.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <ComboBox fx:id="recommend_term" onAction="#choose_type" prefWidth="150.0" translateX="120.0" translateY="5.0" />
-                                          <ComboBox fx:id="recommend_type" layoutX="10.0" layoutY="10.0" prefWidth="150.0" translateX="200.0" translateY="5.0" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type:" translateX="50.0" translateY="10.0" wrappingWidth="54.2060546875" />
+                                          <ComboBox fx:id="recommend_term" onAction="#choose_type" prefWidth="150.0" translateX="50.0" translateY="5.0" />
+                                          <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtype:" translateX="120.0" translateY="10.0" wrappingWidth="71.2060546875" />
+                                          <ComboBox fx:id="recommend_type" layoutX="10.0" layoutY="10.0" prefWidth="150.0" translateX="130.0" translateY="5.0" />
                                        </children>
                                     </HBox>
                                  </top>

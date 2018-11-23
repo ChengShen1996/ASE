@@ -83,6 +83,8 @@ public class ShowRevenueController implements Initializable{
 
     @FXML
     void reset_all(ActionEvent event) {
-
+        month.setValue(null);
+        year.setValue(null);
+        revenue.clear();
     }
 }

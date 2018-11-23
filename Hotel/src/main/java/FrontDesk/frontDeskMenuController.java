@@ -48,7 +48,44 @@ public class frontDeskMenuController implements Initializable {
     public void initialize(URL url, ResourceBundle rb){
         databaseHandler = new DatabaseHandler();
         initCol();
-        recommend_term.getItems().addAll("restaurants");
+        recommend_term.getItems().addAll(
+                "restaurants", "arts", "food", "nightlife",
+                "shopping"
+        );
+    }
+
+    @FXML
+    void choose_type(ActionEvent event) {
+        if(!recommend_term.getValue().isEmpty()){
+            if(recommend_term.getValue().equals("restaurants")){
+                recommend_type.getItems().setAll(
+                        "newamerican", "buffets", "cafes", "chinese", "french", "indpak", "italian",
+                        "japanese", "korean", "mexican", "pizza"
+                );
+            }
+            if(recommend_term.getValue().equals("arts")){
+                recommend_type.getItems().setAll(
+                        "galleries", "movietheaters",
+                        "museums", "opera", "theater"
+                );
+            }
+            if(recommend_term.getValue().equals("food")){
+                recommend_type.getItems().setAll(
+                      "bubbletea", "coffee", "cupcakes", "farmersmarket", "icecream",
+                       "juicebars", "poke", "gourmet", "tea", "wineries"
+                );
+            }
+            if(recommend_term.getValue().equals("nightlife")){
+                recommend_type.getItems().setAll(
+                        "adultentertainment", "bars", "karaoke", "musicvenues"
+                );
+            }
+            if(recommend_term.getValue().equals("shopping")){
+                recommend_type.getItems().setAll(
+                        "fashion", "flowers", "drugstores", "cosmetics", "electronics"
+                );
+            }
+        }
     }
 
     @FXML
@@ -271,24 +308,16 @@ public class frontDeskMenuController implements Initializable {
         }
     }
 
-    @FXML
-    void choose_type(ActionEvent event) {
-        if(!recommend_term.getValue().isEmpty()){
-            if(recommend_term.getValue().equals("restaurants")){
-                recommend_type.getItems().setAll("Chinese");
-            }
-        }
-    }
-
 
     public void loadyelp() {
         yelplist.clear();
         API yelpApi = new API();
         String term = recommend_term.getValue();
         String location = "NYC";
+        String categories = recommend_type.getValue();
         int limit = 10;
         try{
-            List<String[]> restaurantList = yelpApi.Get_yelp(term,location,limit);
+            List<String[]> restaurantList = yelpApi.Get_yelp(term,location,categories,limit);
             String[] img_urls = restaurantList.get(0);
             String[] names = restaurantList.get(1);
             String[] address = restaurantList.get(2);
@@ -315,7 +344,7 @@ public class frontDeskMenuController implements Initializable {
 
     @FXML
     void reset_yelp_table(ActionEvent event) {
-
+        yelptable.getItems().clear();
     }
 
 }
