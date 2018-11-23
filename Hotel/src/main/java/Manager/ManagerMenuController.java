@@ -1,5 +1,4 @@
-package LogIn;
-
+package Manager;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,21 +13,21 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class logInMenuController {
+public class ManagerMenuController {
 
     @FXML
-    private JFXButton main_front_desk;
+    private JFXButton manager_menu_room_price;
 
     @FXML
-    private JFXButton main_manager;
+    private JFXButton manager_menu_revenue;
 
     @FXML
-    void front_desk_menu(ActionEvent event) {
-        loadWindow("/frontDeskMenu.fxml", "FrontDeskMenu");
+    void set_room_price(ActionEvent event) {
+        loadWindow("/SetRoomPrice.fxml", "SetRoomPrice");
     }
 
     @FXML
-    void manager_menu(ActionEvent event) {loadWindow("/ManagerMenu.fxml", "ManagerMenu");}
+    void show_revenue(ActionEvent event) {loadWindow("/ShowRevenue.fxml", "ShowRevenue");}
 
     void loadWindow(String loc, String title){
         try {
@@ -38,9 +37,10 @@ public class logInMenuController {
             stage.setScene(new Scene(parent));
             stage.show();
         } catch (IOException ex){
-            Logger.getLogger(logInMenuController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ManagerMenuController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
 }
+
 
