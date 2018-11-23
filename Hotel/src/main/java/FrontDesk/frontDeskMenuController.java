@@ -44,10 +44,11 @@ public class frontDeskMenuController implements Initializable {
     DatabaseHandler databaseHandler;
     ObservableList<Room> list = FXCollections.observableArrayList();
     ObservableList<Restaurant> yelplist = FXCollections.observableArrayList();
+
     public void initialize(URL url, ResourceBundle rb){
         databaseHandler = new DatabaseHandler();
         initCol();
-        recommend_type.getItems().addAll("restaurants");
+        recommend_term.getItems().addAll("restaurants");
     }
 
     @FXML
@@ -126,6 +127,9 @@ public class frontDeskMenuController implements Initializable {
     private TableColumn<Restaurant,String> location_col;
 
     @FXML
+    private ComboBox<String> recommend_term;
+
+    @FXML
     private ComboBox<String> recommend_type;
 
 
@@ -156,7 +160,12 @@ public class frontDeskMenuController implements Initializable {
     public void initCol() {
         roomIdCol.setCellValueFactory(new PropertyValueFactory<>("roomId"));
         typeCol.setCellValueFactory(new PropertyValueFactory<>("roomTypeName"));
+        thumbnail_col.setCellValueFactory(new PropertyValueFactory<>("image"));
+        name_col.setCellValueFactory(new PropertyValueFactory<>("name"));
+        location_col.setCellValueFactory(new PropertyValueFactory<>("location"));
+        rating_col.setCellValueFactory(new PropertyValueFactory<>("rating"));
         tableView.getItems().clear();
+        yelptable.getItems().clear();
     }
 
     @FXML
@@ -262,11 +271,20 @@ public class frontDeskMenuController implements Initializable {
         }
     }
 
+    @FXML
+    void choose_type(ActionEvent event) {
+        if(!recommend_term.getValue().isEmpty()){
+            if(recommend_term.getValue().equals("restaurants")){
+                recommend_type.getItems().setAll("Chinese");
+            }
+        }
+    }
+
 
     public void loadyelp() {
         yelplist.clear();
         API yelpApi = new API();
-        String term = recommend_type.getValue();
+        String term = recommend_term.getValue();
         String location = "NYC";
         int limit = 10;
         try{

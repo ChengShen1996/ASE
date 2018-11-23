@@ -206,7 +206,8 @@
                                  <top>
                                     <HBox prefHeight="39.0" prefWidth="631.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <ComboBox fx:id="recommend_type" prefWidth="150.0" translateX="230.0" translateY="5.0" />
+                                          <ComboBox fx:id="recommend_term" onAction="#choose_type" prefWidth="150.0" translateX="120.0" translateY="5.0" />
+                                          <ComboBox fx:id="recommend_type" layoutX="10.0" layoutY="10.0" prefWidth="150.0" translateX="200.0" translateY="5.0" />
                                        </children>
                                     </HBox>
                                  </top>
@@ -221,10 +222,10 @@
                                  <center>
                                     <TableView fx:id="yelptable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                       <columns>
-                                        <TableColumn fx:id="thumbnail_col" prefWidth="150.0" text="Image" />
+                                        <TableColumn fx:id="thumbnail_col" prefWidth="150.0" text="thumbnail" />
                                         <TableColumn fx:id="name_col" minWidth="0.0" prefWidth="158.0" text="Name" />
-                                          <TableColumn fx:id="rating_col" minWidth="0.0" prefWidth="116.0" text="Rating" />
-                                          <TableColumn fx:id="location_col" minWidth="0.0" prefWidth="206.0" text="Location" />
+                                          <TableColumn fx:id="location_col" minWidth="0.0" prefWidth="241.0" text="Location" />
+                                          <TableColumn fx:id="rating_col" minWidth="0.0" prefWidth="81.0" text="Rating" />
                                       </columns>
                                     </TableView>
                                  </center>
