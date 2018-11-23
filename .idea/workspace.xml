@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ba597540-35a7-4400-b9a9-0fbf7216fd7d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/java/ManagerRevenue/ShowRevenueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/java/ManagerRevenue/ShowRevenueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/java/ManagerRoomPrice/SetRoomPriceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/java/ManagerRoomPrice/SetRoomPriceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/resources/SetRoomPrice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/resources/SetRoomPrice.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/resources/ShowRevenue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/resources/ShowRevenue.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c8f0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c8f0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c940.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c940.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Hotel/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -201,10 +188,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
-    <option name="y" value="34" />
-    <option name="width" value="1280" />
-    <option name="height" value="773" />
+    <option name="x" value="74" />
+    <option name="y" value="41" />
+    <option name="width" value="1158" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -329,7 +316,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542989191469" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542990809999" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -459,7 +446,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25458000" />
+    <option name="totallyTimeSpent" value="26034000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,10 +458,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="34" width="1280" height="773" extended-state="0" />
-    <editor active="true" />
+    <frame x="70" y="61" width="1280" height="773" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -484,12 +470,12 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32892805" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32892805" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.34801763" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.34801763" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="10" />
