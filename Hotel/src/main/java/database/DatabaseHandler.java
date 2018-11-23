@@ -264,7 +264,7 @@ public class DatabaseHandler {
 
     }
 
-    public ResultSet execQuery(String query) {
+public ResultSet execQuery(String query) {
         ResultSet result;
         try {
             stmt = conn.createStatement();
