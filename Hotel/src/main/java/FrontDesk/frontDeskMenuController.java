@@ -310,6 +310,7 @@ public class frontDeskMenuController implements Initializable {
 
 
     public void loadyelp() {
+        yelptable.getItems().clear();
         yelplist.clear();
         API yelpApi = new API();
         String term = recommend_term.getValue();
