@@ -27,13 +27,11 @@ public class roomServiceUITest extends ApplicationTest {
         JFXTextField f1 = lookup("#room_service_name").query();
         JFXTextField f2 = lookup("#room_service_num").query();
         JFXTextField f3 = lookup("#room_service_req").query();
-        JFXTextField f4 = lookup("#room_service_req1").query();
         JFXButton bt1 = lookup("#room_service_save").query();
         JFXButton bt2 = lookup("#room_service_cancel").query();
         assertEquals("Guest Name", f1.getPromptText() );
         assertEquals("Room Number", f2.getPromptText() );
         assertEquals("Requirements", f3.getPromptText() );
-        assertEquals("cont.", f4.getPromptText() );
         assertThat(bt1).hasText("Save");
         assertThat(bt2).hasText("Cancel");
     }

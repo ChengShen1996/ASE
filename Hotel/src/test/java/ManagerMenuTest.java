@@ -1,4 +1,4 @@
-import LogIn.logIn;
+import Manager.ManagerMenu;
 import javafx.application.Platform;
 import org.junit.jupiter.api.Test;
 
@@ -9,13 +9,15 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import com.jfoenix.controls.JFXButton;
-import static org.testfx.matcher.control.LabeledMatchers.hasText;
+import com.jfoenix.controls.JFXTextField;
+import static org.junit.Assert.*;
 
-public class logInTest extends ApplicationTest {
-     logIn login = new logIn();
+public class ManagerMenuTest extends ApplicationTest{
+
+    ManagerMenu managerMenu = new ManagerMenu();
     @Override
     public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/logInMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/ManagerMenu.fxml"));
 
         Scene scene = new Scene(root);
 
@@ -24,14 +26,14 @@ public class logInTest extends ApplicationTest {
     }
 
     @Test
-    public void button() {
+    public void test() {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                JFXButton bt1 = lookup("#main_front_desk").query();
-                assertThat(bt1).hasText("Front Desk");
-                JFXButton bt2 = lookup("#main_manager").query();
-                assertThat(bt2).hasText("Manager");
+                JFXButton bt1 = lookup("#manager_menu_room_price").query();
+                JFXButton bt2 = lookup("#manager_menu_revenue").query();
+                assertThat(bt1).hasText("Room Price");
+                assertThat(bt2).hasText("Hotel Revenue");
                 bt1.fire();
                 bt2.fire();
             }

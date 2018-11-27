@@ -216,8 +216,8 @@
                                  <bottom>
                                     <HBox prefHeight="39.0" prefWidth="631.0" BorderPane.alignment="CENTER">
                                        <children>
-                                          <JFXButton onAction="#loadyelp" prefHeight="40.0" prefWidth="145.0" text="Search" translateX="150.0" />
-                                          <JFXButton layoutX="10.0" layoutY="10.0" onAction="#reset_yelp_table" prefHeight="40.0" prefWidth="145.0" text="Reset" translateX="200.0" />
+                                          <JFXButton fx:id="search" onAction="#loadyelp" prefHeight="40.0" prefWidth="145.0" text="Search" translateX="150.0" />
+                                          <JFXButton fx:id="recommend_reset" layoutX="10.0" layoutY="10.0" onAction="#reset_yelp_table" prefHeight="40.0" prefWidth="145.0" text="Reset" translateX="200.0" />
                                        </children>
                                     </HBox>
                                  </bottom>

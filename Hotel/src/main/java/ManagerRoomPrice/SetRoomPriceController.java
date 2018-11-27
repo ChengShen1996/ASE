@@ -18,6 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 import javafx.fxml.Initializable;
 import java.sql.SQLException;
 
@@ -33,6 +34,15 @@ public class SetRoomPriceController implements Initializable {
 
     @FXML
     private TextField suite_price;
+
+    @FXML
+    private Button suite_button;
+
+    @FXML
+    private Button single_button;
+
+    @FXML
+    private Button double_button;
 
     public void showsingle(){
         String qu1 = "SELECT t.price FROM ROOMTYPE t " +
@@ -90,6 +100,7 @@ public class SetRoomPriceController implements Initializable {
         String newqu = "UPDATE ROOMTYPE " +
                 "SET price = " + single + " WHERE roomTypeName = 'Single' ";
         System.out.println(newqu);
+        databaseHandler.execAction(newqu);
         if (databaseHandler.execAction(newqu)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText(null);
@@ -132,7 +143,7 @@ public class SetRoomPriceController implements Initializable {
 
     @FXML
     void change_suite(ActionEvent event) {
-        int suite = Integer.parseInt(single_price.getText());
+        int suite = Integer.parseInt(suite_price.getText());
         String newqu = "UPDATE ROOMTYPE " +
                 "SET price = " + suite + " WHERE roomTypeName = 'Suite' ";
         System.out.println(newqu);

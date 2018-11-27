@@ -57,7 +57,7 @@
          <bottom>
             <HBox prefHeight="44.0" prefWidth="367.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton onAction="#show_revenue" prefHeight="44.0" prefWidth="200.0" text="OK" />
+                  <JFXButton fx:id="revenue_ok" onAction="#show_revenue" prefHeight="44.0" prefWidth="200.0" text="OK" />
                   <JFXButton layoutX="10.0" layoutY="10.0" onAction="#reset_all" prefHeight="44.0" prefWidth="197.0" text="Reset" />
                </children>
             </HBox>

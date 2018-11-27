@@ -1,6 +1,7 @@
 package ManagerRevenue;
 
 import CheckIn.addGuestController;
+import com.jfoenix.controls.JFXButton;
 import database.DatabaseHandler;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
@@ -25,6 +26,9 @@ public class ShowRevenueController implements Initializable{
         month.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
         year.getItems().addAll("2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019");
     }
+
+    @FXML
+    private JFXButton revenue_ok;
 
     @FXML
     private TextField revenue;

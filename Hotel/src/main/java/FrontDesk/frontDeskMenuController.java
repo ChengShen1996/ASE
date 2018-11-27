@@ -169,6 +169,11 @@ public class frontDeskMenuController implements Initializable {
     @FXML
     private ComboBox<String> recommend_type;
 
+    @FXML
+    private JFXButton search;
+
+    @FXML
+    private JFXButton recommend_reset;
 
 
 
