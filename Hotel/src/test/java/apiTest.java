@@ -1,6 +1,11 @@
 import API.API;
+import com.jfoenix.controls.JFXButton;
+import javafx.application.Platform;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import javafx.application.Platform;
 public class apiTest {
     @Test
     public void testget(){
@@ -11,6 +16,5 @@ public class apiTest {
         }catch (Exception e){
             System.out.println(e);
         }
-
     }
 }

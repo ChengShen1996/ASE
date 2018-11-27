@@ -98,10 +98,10 @@ public class frontDeskMenuController implements Initializable {
     private Button front_desk_guest;
 
     @FXML
-    private Button resetBtn;
+    private JFXButton resetBtn;
 
     @FXML
-    private Button okBtn;
+    private JFXButton okBtn;
 
     @FXML
     private JFXButton guest_info_Reset;
@@ -110,10 +110,10 @@ public class frontDeskMenuController implements Initializable {
     private JFXButton guest_info_OK;
 
     @FXML
-    private TextField startDateText;
+    private JFXTextField startDateText;
 
     @FXML
-    private TextField endDateText;
+    private JFXTextField endDateText;
 
     @FXML
     private TableView<Room>  tableView;
@@ -229,7 +229,6 @@ public class frontDeskMenuController implements Initializable {
 
         }
         load_room();
-
     }
 
     void load_room() {

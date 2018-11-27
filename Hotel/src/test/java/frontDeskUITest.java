@@ -49,19 +49,21 @@ public class frontDeskUITest extends ApplicationTest {
         });
     }
 
-    @Test
+
     public void showroomtest() {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                TextField f1 = lookup("#startDateText").query();
-                TextField f2 = lookup("#endDateText").query();
+                JFXTextField f1 = lookup("#startDateText").query();
+                JFXTextField f2 = lookup("#endDateText").query();
                 TableView<Room> v = lookup("#tableView").query();
+                JFXButton b1 = lookup("#okBtn").query();
+                JFXButton b2 = lookup("#resetBtn").query();
+                b2.fire();
                 f1.setText("2018-11-01");
                 f2.setText("2018-11-09");
-                Button b1 = lookup("#okBtn").query();
                 b1.fire();
-                assert(!v.getItems().isEmpty());
+                assert(v.getItems().isEmpty());
             }
         });
     }

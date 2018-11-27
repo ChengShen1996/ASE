@@ -3,30 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ba597540-35a7-4400-b9a9-0fbf7216fd7d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hotel/Hotel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/Hotel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cc30.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cc30.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cc80.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cc80.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cc91.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cc91.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hotel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/java/ManagerRevenue/ShowRevenueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/java/ManagerRevenue/ShowRevenueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/java/ManagerRoomPrice/SetRoomPriceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/java/ManagerRoomPrice/SetRoomPriceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/resources/SetRoomPrice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/resources/SetRoomPrice.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/resources/ShowRevenue.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/resources/ShowRevenue.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/main/resources/frontDeskMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/checkOutUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/checkOutUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/apiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/apiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/frontDeskUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/frontDeskUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/guestMenuUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/guestMenuUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/logInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/logInTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/roomServiceUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/roomServiceUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/updateDatabaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/updateDatabaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c8f0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c8f0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c940.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c940.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c951.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c951.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c961.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c961.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Hotel/target/" />
@@ -57,26 +44,27 @@
     <session id="1515859262">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="6" />
           <entry key="fxml" value="22" />
-          <entry key="java" value="103" />
-          <entry key="xml" value="1" />
+          <entry key="java" value="119" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="6" />
-          <entry key="JAVA" value="103" />
-          <entry key="XML" value="23" />
+          <entry key="JAVA" value="119" />
+          <entry key="XML" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -86,9 +74,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="38" />
-          <entry key="JAVA" value="4675" />
+          <entry key="JAVA" value="5065" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="XML" value="25" />
+          <entry key="XML" value="202" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -96,7 +84,8 @@
           <entry key="css" value="38" />
           <entry key="dummy" value="4" />
           <entry key="fxml" value="25" />
-          <entry key="java" value="4675" />
+          <entry key="java" value="5065" />
+          <entry key="xml" value="177" />
         </counts>
       </usages-collector>
     </session>
@@ -104,46 +93,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/RoomServiceTest.java">
+        <entry file="file://$PROJECT_DIR$/Hotel/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="39" column="41" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="478">
+              <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/frontDeskUITest.java">
+        <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="73" column="41" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="41" />
+            <state relative-caret-position="-145">
+              <caret line="230" column="20" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkOutUITest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="29" column="60" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#11014#11015#0" expanded="true" />
+                <element signature="e#11058#11059#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java">
+        <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/frontDeskUITest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="69" column="87" selection-start-line="69" selection-start-column="87" selection-end-line="69" selection-end-column="87" />
+            <state relative-caret-position="283">
+              <caret line="109" column="31" lean-forward="true" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,7 +165,6 @@
         <option value="$PROJECT_DIR$/Hotel/src/main/java/ManagerRevenue/ShowRevenueController.java" />
         <option value="$PROJECT_DIR$/Hotel/src/main/java/ManagerRoomPrice/SetRoomPriceController.java" />
         <option value="$PROJECT_DIR$/Hotel/src/test/java/SetRoomPriceTest.java" />
-        <option value="$PROJECT_DIR$/Hotel/src/test/java/ShowRevenueTest.java" />
         <option value="$PROJECT_DIR$/Hotel/src/main/java/RoomService/RoomServiceController.java" />
         <option value="$PROJECT_DIR$/Hotel/src/test/java/ManagerUITest.java" />
         <option value="$PROJECT_DIR$/Hotel/src/test/java/ManagerMenuTest.java" />
@@ -197,10 +172,15 @@
         <option value="$PROJECT_DIR$/Hotel/src/test/java/roomServiceUITest.java" />
         <option value="$PROJECT_DIR$/Hotel/src/test/java/logInTest.java" />
         <option value="$PROJECT_DIR$/Hotel/src/test/java/guestMenuUITest.java" />
-        <option value="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" />
-        <option value="$PROJECT_DIR$/Hotel/src/test/java/frontDeskUITest.java" />
         <option value="$PROJECT_DIR$/Hotel/src/test/java/checkOutUITest.java" />
         <option value="$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java" />
+        <option value="$PROJECT_DIR$/Hotel/pom.xml" />
+        <option value="$PROJECT_DIR$/Hotel/src/test/java/ShowRevenueTest.java" />
+        <option value="$PROJECT_DIR$/Hotel/src/test/java/insertToDatabaseTest.java" />
+        <option value="$PROJECT_DIR$/Hotel/src/test/java/updateDatabaseTest.java" />
+        <option value="$PROJECT_DIR$/Hotel/src/test/java/apiTest.java" />
+        <option value="$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java" />
+        <option value="$PROJECT_DIR$/Hotel/src/test/java/frontDeskUITest.java" />
       </list>
     </option>
   </component>
@@ -216,11 +196,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="52" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="85" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="773" />
+    <option name="width" value="1242" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -230,6 +210,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,6 +271,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="CheckOut" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASE" type="462c0819:PsiDirectoryNode" />
+              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
@@ -389,14 +380,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543335908442" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543360081229" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -420,7 +409,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in Hotel">
+  <component name="RunManager" selected="Application.logIn">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -433,10 +422,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in Hotel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="logIn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LogIn.logIn" />
+      <module name="Hotel" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LogIn.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShowRevenueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hotel" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="ShowRevenueTest" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShowRevenueTest.date_year" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hotel" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ShowRevenueTest" />
+      <option name="METHOD_NAME" value="date_year" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShowRevenueTest.year" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hotel" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ShowRevenueTest" />
+      <option name="METHOD_NAME" value="year" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -448,44 +473,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="checkInUITest.nametest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Hotel" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="checkInUITest" />
-      <option name="METHOD_NAME" value="nametest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="checkOutUITest.nametest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Hotel" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="checkOutUITest" />
-      <option name="METHOD_NAME" value="nametest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="frontDeskUITest.yelptest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="frontDeskUITest.showroomtest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hotel" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="frontDeskUITest" />
-      <option name="METHOD_NAME" value="yelptest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="guestMenuUITest.nametest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Hotel" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="guestMenuUITest" />
-      <option name="METHOD_NAME" value="nametest" />
+      <option name="METHOD_NAME" value="showroomtest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -510,19 +502,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.guestMenuUITest.nametest" />
-      <item itemvalue="JUnit.frontDeskUITest.yelptest" />
-      <item itemvalue="JUnit.checkOutUITest.nametest" />
-      <item itemvalue="JUnit.checkInUITest.nametest" />
-      <item itemvalue="JUnit.All in Hotel" />
+      <item itemvalue="JUnit.ShowRevenueTest.date_year" />
+      <item itemvalue="JUnit.ShowRevenueTest" />
+      <item itemvalue="JUnit.ShowRevenueTest.year" />
+      <item itemvalue="Application.logIn" />
+      <item itemvalue="JUnit.frontDeskUITest.showroomtest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Hotel" />
-        <item itemvalue="JUnit.checkInUITest.nametest" />
-        <item itemvalue="JUnit.checkOutUITest.nametest" />
-        <item itemvalue="JUnit.frontDeskUITest.yelptest" />
-        <item itemvalue="JUnit.guestMenuUITest.nametest" />
+        <item itemvalue="Application.logIn" />
+        <item itemvalue="JUnit.frontDeskUITest.showroomtest" />
+        <item itemvalue="JUnit.ShowRevenueTest.date_year" />
+        <item itemvalue="JUnit.ShowRevenueTest.year" />
+        <item itemvalue="JUnit.ShowRevenueTest" />
       </list>
     </recent_temporary>
   </component>
@@ -538,44 +530,45 @@
       <updated>1540758552963</updated>
       <workItem from="1541252061803" duration="4689000" />
       <workItem from="1543002883597" duration="84000" />
-      <workItem from="1543282862770" duration="23607000" />
+      <workItem from="1543282862770" duration="24261000" />
+      <workItem from="1543342686390" duration="10917000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManagerMenuTest_test - 2018.11.27 at 10h 33m 19s.xml">
-      <configuration name="ManagerMenuTest.test" configurationId="JUnit" />
+    <history-entry file="ShowRevenueTest_start - 2018.11.27 at 17h 30m 33s.xml">
+      <configuration name="ShowRevenueTest.start" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="logInTest_button - 2018.11.27 at 10h 39m 52s.xml">
-      <configuration name="logInTest.button" configurationId="JUnit" />
+    <history-entry file="ShowRevenueTest_date_year - 2018.11.27 at 17h 31m 05s.xml">
+      <configuration name="ShowRevenueTest.date_year" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="frontDeskUITest_showroomtest - 2018.11.27 at 10h 57m 02s.xml">
+    <history-entry file="ShowRevenueTest_date_year - 2018.11.27 at 17h 31m 21s.xml">
+      <configuration name="ShowRevenueTest.date_year" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShowRevenueTest_date_year - 2018.11.27 at 17h 31m 53s.xml">
+      <configuration name="ShowRevenueTest.date_year" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShowRevenueTest - 2018.11.27 at 17h 32m 37s.xml">
+      <configuration name="ShowRevenueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShowRevenueTest_date_year - 2018.11.27 at 17h 33m 03s.xml">
+      <configuration name="ShowRevenueTest.date_year" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShowRevenueTest_date_year - 2018.11.27 at 17h 33m 26s.xml">
+      <configuration name="ShowRevenueTest.date_year" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShowRevenueTest_year - 2018.11.27 at 17h 33m 41s.xml">
+      <configuration name="ShowRevenueTest.year" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShowRevenueTest_date_year - 2018.11.27 at 17h 34m 02s.xml">
+      <configuration name="ShowRevenueTest.date_year" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="frontDeskUITest_showroomtest - 2018.11.27 at 17h 50m 53s.xml">
       <configuration name="frontDeskUITest.showroomtest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="frontDeskUITest_showroomtest - 2018.11.27 at 10h 57m 41s.xml">
-      <configuration name="frontDeskUITest.showroomtest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="frontDeskUITest - 2018.11.27 at 10h 59m 08s.xml">
-      <configuration name="frontDeskUITest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="frontDeskUITest_showguests - 2018.11.27 at 11h 05m 05s.xml">
-      <configuration name="frontDeskUITest.showguests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="guestMenuUITest_nametest - 2018.11.27 at 11h 07m 13s.xml">
-      <configuration name="guestMenuUITest.nametest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="frontDeskUITest_yelptest - 2018.11.27 at 11h 13m 49s.xml">
-      <configuration name="frontDeskUITest.yelptest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="checkOutUITest_nametest - 2018.11.27 at 11h 18m 37s.xml">
-      <configuration name="checkOutUITest.nametest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="checkOutUITest_nametest - 2018.11.27 at 11h 18m 46s.xml">
-      <configuration name="checkOutUITest.nametest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56214000" />
+    <option name="totallyTimeSpent" value="67785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,10 +580,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="85" y="23" width="1242" height="804" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2911302" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34416667" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Nl-Palette" order="3" />
@@ -600,18 +592,17 @@
       <window_info id="UI Designer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2686747" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26685393" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32892805" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.34705883" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.34691012" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32941177" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32891566" />
-      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.14306152" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3272472" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -622,6 +613,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32956383" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.10014306" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,10 +623,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Hotel/src/main/resources/addGuest.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/resources/showMap.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -658,11 +646,6 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1478" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/resources/GuestMenu.fxml">
@@ -706,16 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/LogIn/logIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/Manager/ManagerMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -743,27 +716,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/entity/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/entity/Restaurant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-417">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/database/DatabaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -821,27 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/insertToDatabaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/apiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/ManagerRoomPrice/SetRoomPrice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -886,26 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/SetRoomPriceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/ShowRevenueTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -977,6 +892,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/guestMenuUITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/CheckOut/deleteGuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/SetRoomPriceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkOutUITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="29" column="60" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/RoomServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -997,54 +956,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/guestMenuUITest.java">
+    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/database/DatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="-2651">
+          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/ShowRevenueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/insertToDatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/apiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/updateDatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/LogIn/logIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/entity/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/FrontDesk/frontDeskMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="151" column="43" selection-start-line="151" selection-start-column="34" selection-end-line="151" selection-end-column="43" />
+        <state relative-caret-position="-145">
+          <caret line="230" column="20" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#11014#11015#0" expanded="true" />
+            <element signature="e#11058#11059#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/CheckOut/deleteGuestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/frontDeskUITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="73" column="41" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkOutUITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="29" column="60" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="69" column="87" selection-start-line="69" selection-start-column="87" selection-end-line="69" selection-end-column="87" />
+        <state relative-caret-position="283">
+          <caret line="109" column="31" lean-forward="true" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

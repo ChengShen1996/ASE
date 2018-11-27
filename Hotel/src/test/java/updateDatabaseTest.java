@@ -1,4 +1,5 @@
 import database.DatabaseHandler;
+import javafx.application.Platform;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Created by jeremyjiang on 10/29/18.
  */
 public class updateDatabaseTest {
+
 
     @Test
     public void testUpdate() {
@@ -41,6 +43,6 @@ public class updateDatabaseTest {
                 "name = '" + name + "' AND checkInDate = '" + checkInDate+"'";
         databaseHandler.execAction(qu_delete);
 
-
     }
+
 }
