@@ -13,6 +13,7 @@ import org.json.JSONObject;
 public class API {
     private final String YELP_USER_AGENT = "Bearer _BaNlKEH-hPFgh57xEqG6wD9Y7PXw0kkb8fsZrmmR-QRRA" +
             "KcejYX6UKqw5zfOcEUn4TVj36eMqK4g1uX6dQaBPKL8vf9A_b-ZaweGdTTwbRKfGSg3CSQQbHuuOHtW3Yx";
+    public int responseCode;
     public List<String[]> Get_yelp(String term, String qlocation, String categories, int limit) throws Exception {
 
         String url = "";
@@ -33,7 +34,7 @@ public class API {
         //add request header
         con.setRequestProperty("Authorization", YELP_USER_AGENT);
 
-        int responseCode = con.getResponseCode();
+        responseCode = con.getResponseCode();
         System.out.println("\nSending 'GET' request to URL : " + url);
         System.out.println("Response Code : " + responseCode);
 
