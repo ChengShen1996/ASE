@@ -20,8 +20,6 @@ install: true
 script:
   - cd Hotel
   - mvn clean install
-  - mvn test
-after_success:
   - mvn clean test jacoco:report coveralls:report
 
 
