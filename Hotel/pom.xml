@@ -21,6 +21,7 @@
                 <version>4.3.0</version>
                 <configuration>
                     <repoToken>yourcoverallsprojectrepositorytoken</repoToken>
+                    <sourceEncoding>project.build.sourceEncoding</sourceEncoding>
                 </configuration>
             </plugin>
             <plugin>
