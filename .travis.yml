@@ -19,8 +19,8 @@ addons:
 install: true
 script:
   - cd Hotel
-  - mvn clean install
-  - mvn test
+  - mvn clean install -U
+  - mvn clean test jacoco:report coveralls:report
 
 
 
