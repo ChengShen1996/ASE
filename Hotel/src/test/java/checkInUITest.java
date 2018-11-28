@@ -18,6 +18,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Random;
+import javafx.scene.text.Text;
 
 import static org.junit.Assert.*;
 import static org.testfx.matcher.control.LabeledMatchers.hasText;
@@ -35,12 +36,12 @@ public class checkInUITest extends ApplicationTest {
         stage.show();
     }
 
+
     @Test
-    public void nametest() {
+    public void validtest() {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                String[] q = showGuest();
                 JFXTextField f1 = lookup("#requirements").query();
                 JFXTextField f2 = lookup("#check_out_date").query();
                 JFXTextField f3 = lookup("#guest_name").query();
@@ -48,18 +49,88 @@ public class checkInUITest extends ApplicationTest {
                 JFXTextField f6 = lookup("#check_in_date").query();
                 JFXButton bt1 = lookup("#save_button").query();
                 JFXButton bt2 = lookup("#cancel_button").query();
-                assertEquals("Requirements", f1.getPromptText() );
-                assertEquals("Check-out Date", f2.getPromptText() );
-                assertEquals("Guest Name", f3.getPromptText() );
-                assertEquals("Room Number", f5.getPromptText() );
-                assertEquals("Check-in Date", f6.getPromptText() );
-                assertThat(bt1).hasText("Save");
-                assertThat(bt2).hasText("Cancel");
+                JFXButton bt3 = lookup("#Total_price_button").query();
+                Text t1 = lookup("#priceText").query();
+                String[] q = showGuest();
                 f3.setText(q[0]);
                 f5.setText(q[1]);
                 f1.setText("I need hot water");
                 f2.setText("2018-12-25");
                 f6.setText("2018-12-20");
+                bt3.fire();
+                assert(!t1.getText().isEmpty());
+                bt1.fire();
+                assert(findGuest(q[0], q[1]));
+                bt2.fire();
+            }
+        });
+    }
+
+    @Test
+    public void NullDateAndRoomTest(){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                JFXTextField f1 = lookup("#requirements").query();
+                JFXTextField f2 = lookup("#check_out_date").query();
+                JFXTextField f3 = lookup("#guest_name").query();
+                JFXTextField f5 = lookup("#room_number").query();
+                JFXTextField f6 = lookup("#check_in_date").query();
+                JFXButton bt1 = lookup("#save_button").query();
+                JFXButton bt2 = lookup("#cancel_button").query();
+                JFXButton bt3 = lookup("#Total_price_button").query();
+                Text t1 = lookup("#priceText").query();
+                String[] q = showGuest();
+                f3.setText(q[0]);
+                f1.setText("I need hot water");
+                bt1.fire();
+            }
+        });
+    }
+
+    @Test
+    public void InvalidDateTest(){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                JFXTextField f1 = lookup("#requirements").query();
+                JFXTextField f2 = lookup("#check_out_date").query();
+                JFXTextField f3 = lookup("#guest_name").query();
+                JFXTextField f5 = lookup("#room_number").query();
+                JFXTextField f6 = lookup("#check_in_date").query();
+                JFXButton bt1 = lookup("#save_button").query();
+                JFXButton bt2 = lookup("#cancel_button").query();
+                JFXButton bt3 = lookup("#Total_price_button").query();
+                Text t1 = lookup("#priceText").query();
+                String[] q = showGuest();
+                f3.setText(q[0]);
+                f5.setText(q[1]);
+                f2.setText("2014-11-25");
+                f6.setText("2014-12-01");
+                bt1.fire();
+            }
+        });
+    }
+
+    @Test
+    public void InvalidExistingGuestAndZeroPriceTest(){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                JFXTextField f1 = lookup("#requirements").query();
+                JFXTextField f2 = lookup("#check_out_date").query();
+                JFXTextField f3 = lookup("#guest_name").query();
+                JFXTextField f5 = lookup("#room_number").query();
+                JFXTextField f6 = lookup("#check_in_date").query();
+                JFXButton bt1 = lookup("#save_button").query();
+                JFXButton bt2 = lookup("#cancel_button").query();
+                JFXButton bt3 = lookup("#Total_price_button").query();
+                Text t1 = lookup("#priceText").query();
+                f3.setText("chaichaichai");
+                f5.setText("101");
+                f2.setText("2018-01-01");
+                f6.setText("2018-01-01");
+                bt3.fire();
                 bt1.fire();
             }
         });
@@ -80,5 +151,20 @@ public class checkInUITest extends ApplicationTest {
             Logger.getLogger(SetRoomPriceController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return result;
+    }
+
+    public boolean findGuest(String name, String room){
+        int roomId = Integer.parseInt(room);
+        String qu = "SELECT c.name, c.roomId FROM CUSTOMER c WHERE c.name = " +
+                "'" + name + "' AND c.roomId = " + roomId + " ";
+        ResultSet rs = databaseHandler.execQuery(qu);
+        try {
+            while (rs.next()) {
+                return true;
+            }
+        } catch (SQLException ex){
+            Logger.getLogger(SetRoomPriceController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
 }

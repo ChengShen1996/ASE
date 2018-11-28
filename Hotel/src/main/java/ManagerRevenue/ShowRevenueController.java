@@ -31,6 +31,9 @@ public class ShowRevenueController implements Initializable{
     private JFXButton revenue_ok;
 
     @FXML
+    private JFXButton show_revenue_reset;
+
+    @FXML
     private TextField revenue;
 
     @FXML
@@ -67,7 +70,7 @@ public class ShowRevenueController implements Initializable{
         } else if (selectedMonth == "02") {
             endDate = selectedYear + "-" + selectedMonth + "-28";
         } else {
-            endDate = selectedYear + "-" + selectedMonth + "-31";
+            endDate = selectedYear + "-" + selectedMonth + "-30";
         }
 
         String qu = "SELECT SUM(c.totalPrice) AS Total FROM CUSTOMER c WHERE c.checkOutDate BETWEEN  '"+ startDate +"'  AND  '"+ endDate +"' ";

@@ -182,10 +182,6 @@ public class frontDeskMenuController implements Initializable {
         loadWindow("/GuestMenu.fxml", "GuestMenu");
     }
 
-    @FXML
-    void show_map(ActionEvent event) {
-        loadWindow("/showMap.fxml", "Map");
-    }
 
     void loadWindow(String loc, String title){
         try {
@@ -210,6 +206,7 @@ public class frontDeskMenuController implements Initializable {
         yelptable.getItems().clear();
     }
 
+
     @FXML
     void show_availability(ActionEvent event) {
         tableView.getItems().clear();
@@ -230,6 +227,7 @@ public class frontDeskMenuController implements Initializable {
         }
         load_room();
     }
+
 
     void load_room() {
         list.clear();
@@ -257,9 +255,6 @@ public class frontDeskMenuController implements Initializable {
                 String roomTypeName = rs.getString("roomTypeName");
 
                 list.add(new Room(roomId, roomTypeId, price, roomTypeName));
-
-                System.out.println(roomId + ","
-                        + roomTypeName );
             }
 
         } catch (SQLException ex){
@@ -268,7 +263,6 @@ public class frontDeskMenuController implements Initializable {
 
         tableView.getItems().addAll(list);
     }
-
 
 
     @FXML

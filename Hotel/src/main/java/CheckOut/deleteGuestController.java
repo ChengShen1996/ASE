@@ -46,6 +46,14 @@ public class deleteGuestController implements Initializable {
         String name = check_out_guest_name.getText();
         String roomId = check_out_room_number.getText();
 
+        if (name.isEmpty() ||  roomId.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Please Enter in all fields");
+            alert.showAndWait();
+            return;
+        }
+
         String qu1 = "SELECT COUNT(*) AS total FROM CUSTOMER WHERE roomId = " + roomId
                 + " AND name = '" + name + "'";
 //        System.out.println(qu1);
@@ -65,16 +73,6 @@ public class deleteGuestController implements Initializable {
         } catch (SQLException ex){
             Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-
-        if (name.isEmpty() ||  roomId.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setContentText("Please Enter in all fields");
-            alert.showAndWait();
-            return;
-        }
-
 
         String qu = "UPDATE Customer "
                 + "SET isGone = true "

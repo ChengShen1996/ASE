@@ -49,7 +49,7 @@ public class frontDeskUITest extends ApplicationTest {
         });
     }
 
-
+    @Test
     public void showroomtest() {
         Platform.runLater(new Runnable() {
             @Override
@@ -63,7 +63,7 @@ public class frontDeskUITest extends ApplicationTest {
                 f1.setText("2018-11-01");
                 f2.setText("2018-11-09");
                 b1.fire();
-                assert(v.getItems().isEmpty());
+                //assert(v.getItems().isEmpty());
             }
         });
     }
@@ -116,6 +116,26 @@ public class frontDeskUITest extends ApplicationTest {
                 b2.fire();
                 c1.setValue("restaurants");
                 c2.setValue("chinese");
+                b1.fire();
+                assert(!v1.getItems().isEmpty());
+                b2.fire();
+                c1.setValue("arts");
+                c2.setValue("theater");
+                b1.fire();
+                assert(!v1.getItems().isEmpty());
+                b2.fire();
+                c1.setValue("food");
+                c2.setValue("bubbletea");
+                b1.fire();
+                assert(!v1.getItems().isEmpty());
+                b2.fire();
+                c1.setValue("nightlife");
+                c2.setValue("bars");
+                b1.fire();
+                assert(!v1.getItems().isEmpty());
+                b2.fire();
+                c1.setValue("shopping");
+                c2.setValue("fashion");
                 b1.fire();
                 assert(!v1.getItems().isEmpty());
             }
