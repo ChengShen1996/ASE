@@ -3,7 +3,7 @@ import RoomService.addRoomService;
 import com.jfoenix.controls.JFXTextField;
 import database.DatabaseHandler;
 import org.junit.jupiter.api.Test;
-
+import java.util.Collections;
 import org.testfx.framework.junit5.ApplicationTest;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -42,12 +42,47 @@ public class RoomServiceTest extends ApplicationTest{
                 JFXTextField f2 = lookup("#room_service_num").query();
                 JFXTextField f3 = lookup("#room_service_req").query();
                 JFXButton b = lookup("#room_service_save").query();
+                JFXButton b2 = lookup("#room_service_cancel").query();
                 f1.setText(q[0]);
                 f2.setText(q[1]);
                 f3.setText("1");
                 b.fire();
                 String Req = checkRequirement(q[0], q[1]);
                 assert (Req.indexOf("1") >= 0);
+                b2.fire();
+            }
+        });
+    }
+
+    @Test
+    public void invalidmissingfield() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                JFXTextField f1 = lookup("#room_service_name").query();
+                JFXTextField f2 = lookup("#room_service_num").query();
+                JFXTextField f3 = lookup("#room_service_req").query();
+                JFXButton b = lookup("#room_service_save").query();
+                f2.setText("101");
+                b.fire();
+            }
+        });
+    }
+
+    @Test
+    public void invalidlongreqfield() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                String[] q = showGuest();
+                JFXTextField f1 = lookup("#room_service_name").query();
+                JFXTextField f2 = lookup("#room_service_num").query();
+                JFXTextField f3 = lookup("#room_service_req").query();
+                JFXButton b = lookup("#room_service_save").query();
+                f1.setText(q[0]);
+                f2.setText(q[1]);
+                f3.setText(String.join("", Collections.nCopies(201, "1")));
+                b.fire();
             }
         });
     }

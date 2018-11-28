@@ -36,15 +36,13 @@ public class Restaurant {
     public ImageView getImage() {
         return image;
     }
-
-    public String getName() {
-        return name.get();
-    }
-
+    /*
+    public String getName() { return name.get(); }
+*/
     public SimpleStringProperty nameProperty() {
         return name;
     }
-
+/*
     public void setName(String name) {
         this.name.set(name);
     }
@@ -52,11 +50,11 @@ public class Restaurant {
     public String getLocation() {
         return location.get();
     }
-
+*/
     public SimpleStringProperty locationProperty() {
         return location;
     }
-
+/*
     public void setLocation(String location) {
         this.location.set(location);
     }
@@ -64,12 +62,13 @@ public class Restaurant {
     public String getRating() {
         return rating.get();
     }
-
+*/
     public SimpleStringProperty ratingProperty() {
         return rating;
     }
-
+/*
     public void setRating(String rating) {
         this.rating.set(rating);
     }
+    */
 }

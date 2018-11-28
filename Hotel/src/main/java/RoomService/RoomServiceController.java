@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.ResultSet;
@@ -21,6 +23,9 @@ public class RoomServiceController implements Initializable {
         databaseHandler = new DatabaseHandler();
 
     }
+
+    @FXML
+    private AnchorPane rootPane;
 
     @FXML
     private JFXButton room_service_save;
@@ -98,7 +103,8 @@ public class RoomServiceController implements Initializable {
 
     @FXML
     void cancelRoomService(ActionEvent event) {
-
+        Stage stage = (Stage) rootPane.getScene().getWindow();
+        stage.close();
     }
 
 }

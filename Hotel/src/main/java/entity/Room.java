@@ -18,7 +18,7 @@ public class Room {
         this.price = new SimpleIntegerProperty(price);
         this.roomTypeName = new SimpleStringProperty(roomTypeName);
     }
-
+    /*
     public int getRoomId() {
         return roomId.get();
     }
@@ -66,4 +66,5 @@ public class Room {
     public void setRoomTypeName(String roomTypeName) {
         this.roomTypeName.set(roomTypeName);
     }
+    */
 }

@@ -109,12 +109,6 @@ public class SetRoomPriceController implements Initializable {
             single_price.clear();
             showsingle();
         }
-        else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText(null);
-            alert.setContentText("Failed");
-            alert.showAndWait();
-        }
         databaseHandler.checkData();
     }
 
@@ -132,12 +126,6 @@ public class SetRoomPriceController implements Initializable {
             double_price.clear();
             showdouble();
         }
-        else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText(null);
-            alert.setContentText("Failed");
-            alert.showAndWait();
-        }
         databaseHandler.checkData();
     }
 
@@ -154,12 +142,6 @@ public class SetRoomPriceController implements Initializable {
             alert.showAndWait();
             suite_price.clear();
             showsuite();
-        }
-        else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText(null);
-            alert.setContentText("Failed");
-            alert.showAndWait();
         }
         databaseHandler.checkData();
     }
