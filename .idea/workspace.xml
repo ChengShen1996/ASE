@@ -30,7 +30,7 @@
     <SUITE FILE_PATH="coverage/ASE$SetRoomPriceTest_test1.ic" NAME="SetRoomPriceTest.test1 Coverage Results" MODIFIED="1543305698942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ASE$logInTest_button.ic" NAME="logInTest.button Coverage Results" MODIFIED="1543333182664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ASE$ManagerMenuTest_test.ic" NAME="ManagerMenuTest.test Coverage Results" MODIFIED="1543332791512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/ASE$ShowRevenueTest.ic" NAME="ShowRevenueTest Coverage Results" MODIFIED="1543371757704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ASE$ShowRevenueTest.ic" NAME="ShowRevenueTest Coverage Results" MODIFIED="1543372149485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ASE$All_in_Hotel.ic" NAME="All in Hotel Coverage Results" MODIFIED="1543335879556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ASE$RoomServiceTest_addvalidservice.ic" NAME="RoomServiceTest.addvalidservice Coverage Results" MODIFIED="1543331599275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/ASE$SetRoomPriceTest.ic" NAME="SetRoomPriceTest Coverage Results" MODIFIED="1543305901767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -393,7 +393,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543372013546" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543372176629" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -417,7 +417,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.logIn">
+  <component name="RunManager" selected="JUnit.ShowRevenueTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -514,8 +514,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.logIn" />
         <item itemvalue="JUnit.ShowRevenueTest" />
+        <item itemvalue="Application.logIn" />
         <item itemvalue="JUnit.frontDeskUITest" />
         <item itemvalue="JUnit.checkOutUITest" />
         <item itemvalue="JUnit.checkOutUITest.validtest" />
