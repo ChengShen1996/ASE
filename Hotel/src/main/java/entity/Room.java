@@ -22,11 +22,11 @@ public class Room {
     public int getRoomId() {
         return roomId.get();
     }
-
+    */
     public SimpleIntegerProperty roomIdProperty() {
         return roomId;
     }
-
+    /*
     public void setRoomId(int roomId) {
         this.roomId.set(roomId);
     }
@@ -58,11 +58,11 @@ public class Room {
     public String getRoomTypeName() {
         return roomTypeName.get();
     }
-
+    */
     public SimpleStringProperty roomTypeNameProperty() {
         return roomTypeName;
     }
-
+    /*
     public void setRoomTypeName(String roomTypeName) {
         this.roomTypeName.set(roomTypeName);
     }
