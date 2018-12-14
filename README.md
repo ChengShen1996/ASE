@@ -1,5 +1,5 @@
 
-# Hotel Management System [![Build Status](https://travis-ci.org/ChengShen1996/ASE.svg?branch=iteration1-test-wen)](https://travis-ci.org/ChengShen1996/ASE) [![Coverage Status](https://coveralls.io/repos/github/ChengShen1996/ASE/badge.svg?branch=iteration2-chaiquan)](https://coveralls.io/github/ChengShen1996/ASE)
+# Hotel Management System ![Build Status](https://travis-ci.org/ChengShen1996/ASE.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/ChengShen1996/ASE/badge.svg?branch=iteration2-chaiquan)](https://coveralls.io/github/ChengShen1996/ASE)
 
 
 Hotel management is a critical part of the hotel operation chain. Our goal is to create an efficient, secure, and user-friendly hotel management system to provide excellent service to the customers. Our hotel management system is an all-in -one application, which is designed to accommodate the needs of different staff members in the hotel. Front desk staffs are able to make the most suitable room arrangement and recommend places of interests to the customers. Managers are able to view and analyze the revenue over a certain period of time. We believe that our hotel management is capable of facilitating the service and helping the hotel to develop at a fast pace.
@@ -66,7 +66,7 @@ Tested by [Coveralls](https://coveralls.io/github/ChengShen1996/ASE)
 
 ## Application Opreataion
 
-### User story 1: As a manager, I want to see the revenue so that I can evaluate the operation status of the hotel.
+### User story 1: As a manager, I want to see the revenue and set room price so that I can evaluate the operation status of the hotel.
  login with Manager -> select Room Price/ Hotel Revenue -> set price/ calculate revenue
 <p float="left">
   
