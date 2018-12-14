@@ -33,9 +33,7 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,6 +42,8 @@ public class frontDeskMenuController implements Initializable {
     DatabaseHandler databaseHandler;
     ObservableList<Room> list = FXCollections.observableArrayList();
     ObservableList<Restaurant> yelplist = FXCollections.observableArrayList();
+    private Set<String> rooms;
+    private String[] roomnumbers;
 
     public void initialize(URL url, ResourceBundle rb){
         databaseHandler = new DatabaseHandler();
@@ -52,6 +52,9 @@ public class frontDeskMenuController implements Initializable {
                 "restaurants", "arts", "food", "nightlife",
                 "shopping"
         );
+        rooms = new HashSet<String>();
+        roomnumbers = new String[] {"101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "302", "303", "304", "305", "306", "307", "308", "309", "310"};
+        Collections.addAll(rooms, roomnumbers);
     }
 
     @FXML
@@ -216,6 +219,13 @@ public class frontDeskMenuController implements Initializable {
         try {
             Date date1 = formatter1.parse(fromDate);
             Date date2 = formatter1.parse(toDate);
+            if(date2.compareTo(date1) < 0){
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("Invalid Date Format");
+                alert.showAndWait();
+                return;
+            }
         }
         catch(Exception ex) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -223,7 +233,6 @@ public class frontDeskMenuController implements Initializable {
             alert.setContentText("Invalid Date Format");
             alert.showAndWait();
             return;
-
         }
         load_room();
     }
@@ -242,7 +251,7 @@ public class frontDeskMenuController implements Initializable {
                 "r.roomTypeId = t.roomTypeId AND (('"
                 + fromDate + "' BETWEEN c.checkInDate AND c.checkOutDate) OR ('"
                 + toDate + "' BETWEEN c.checkInDate AND c.checkOutDate))";
-
+        System.out.println("here");
         System.out.println(qu);
         ResultSet rs = databaseHandler.execQuery(qu);
 
@@ -255,11 +264,13 @@ public class frontDeskMenuController implements Initializable {
                 String roomTypeName = rs.getString("roomTypeName");
 
                 list.add(new Room(roomId, roomTypeId, price, roomTypeName));
+                System.out.println(roomId + ":" + roomTypeName);
             }
 
         } catch (SQLException ex){
             Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println("here:  " + list.size());
 
         tableView.getItems().addAll(list);
     }
@@ -278,7 +289,16 @@ public class frontDeskMenuController implements Initializable {
     @FXML
     void show_guest(ActionEvent event) {
         String name = Guest_info_name.getText();
+
+        if(!rooms.contains(Guest_info_room.getText())){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Wrong room number");
+            alert.showAndWait();
+            return;
+        }
         int room = Integer.parseInt(Guest_info_room.getText());
+
         String qu = "SELECT c.name, c.roomId, c.CheckInDate, c.CheckOutDate, c.requirement, c.totalPrice " +
                 "FROM CUSTOMER c " +
                 "WHERE c.name = '" + name + "' AND c.roomId = " + room + " ";

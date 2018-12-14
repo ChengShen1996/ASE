@@ -97,6 +97,7 @@ public class SetRoomPriceController implements Initializable {
     @FXML
     void change_single(ActionEvent event) {
         int single = Integer.parseInt(single_price.getText());
+
         String newqu = "UPDATE ROOMTYPE " +
                 "SET price = " + single + " WHERE roomTypeName = 'Single' ";
         System.out.println(newqu);

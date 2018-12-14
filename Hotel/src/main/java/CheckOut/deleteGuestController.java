@@ -15,16 +15,24 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.ResourceBundle;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class deleteGuestController implements Initializable {
 
     DatabaseHandler databaseHandler;
+    private Set<String> rooms;
+    private String[] roomnumbers;
+
     public void initialize(URL url, ResourceBundle rb){
         databaseHandler = new DatabaseHandler();
-
+        rooms = new HashSet<String>();
+        roomnumbers = new String[] {"101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "302", "303", "304", "305", "306", "307", "308", "309", "310"};
+        Collections.addAll(rooms, roomnumbers);
     }
     @FXML
     private AnchorPane rootPane;
@@ -54,8 +62,16 @@ public class deleteGuestController implements Initializable {
             return;
         }
 
+        if(!rooms.contains(roomId)){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Wrong room number");
+            alert.showAndWait();
+            return;
+        }
+
         String qu1 = "SELECT COUNT(*) AS total FROM CUSTOMER WHERE roomId = " + roomId
-                + " AND name = '" + name + "'";
+                + " AND name = '" + name + "'" + " AND isGone = false ";
 //        System.out.println(qu1);
         ResultSet rs = databaseHandler.execQuery(qu1);
         try {
@@ -64,7 +80,7 @@ public class deleteGuestController implements Initializable {
                 if (total == 0) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setHeaderText(null);
-                    alert.setContentText("Guest and Room Not Found");
+                    alert.setContentText("We can't checkout due to certain error");
                     alert.showAndWait();
                     return;
                 }
