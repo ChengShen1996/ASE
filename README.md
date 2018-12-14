@@ -66,7 +66,7 @@ Tested by [Coveralls](https://coveralls.io/github/ChengShen1996/ASE)
 
 ## Application Opreataion
 
-### User story 1: Login with manager and set room price or check revenue in a selected period.
+### User story 1: As a manager, I want to see the revenue so that I can evaluate the operation status of the hotel.
  login with Manager -> select Room Price/ Hotel Revenue -> set price/ calculate revenue
 <p float="left">
   
@@ -75,6 +75,45 @@ Tested by [Coveralls](https://coveralls.io/github/ChengShen1996/ASE)
 <img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/set_price.png" alt="login" width="220" height= "250"/>
 <img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/check_revenue.png" alt="login" width="220" height= "250"/>
 </p>
+
+### User story 2: As front desk, I want to be able to help customers check in and check out so that we have the right information. 
+ login with Front Desk -> select Guest -> set check-in / check-out
+<p float="left">
+  
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/login.png" alt="login" width="200" height= "220"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/front_availiable.png" alt="login" width="220" height= "250"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/checkin.png" alt="login" width="220" height= "250"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/checkout.png" alt="login" width="220" height= "250"/>
+</p>
+
+### User story 3: As front desk, I want to be able to tell the customers our available rooms and the prices, so that I arrange the most suitable rooms for them.
+ login with Front Desk -> availiable room
+<p float="left">
+  
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/login.png" alt="login" width="200" height= "220"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/front_availiable.png" alt="login" width="220" height= "250"/>
+
+</p>
+
+### User story 4: As front desk, I want to be able to record requirements of customers and add other room service for our customers, so that customers can enjoy room service and hotels can make profits.
+ login with Front Desk -> select Guest -> add Requirement
+<p float="left">
+  
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/login.png" alt="login" width="200" height= "220"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/front_availiable.png" alt="login" width="220" height= "250"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/requirement.png" alt="login" width="220" height= "250"/>
+
+</p>
+
+### User story 5: As front desk, I want to be able to recommend restaurants, museums, and other places of interests around our hotel, so that customers can go to desirable places.
+ login with Front Desk -> select categories for recommendation
+<p float="left">
+  
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/login.png" alt="login" width="200" height= "220"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/front_rec.png" alt="login" width="220" height= "250"/>
+
+</p>
+
 
 
 
