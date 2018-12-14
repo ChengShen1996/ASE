@@ -44,6 +44,7 @@ public class RoomServiceController implements Initializable {
 
     @FXML
     void addRoomService(ActionEvent event) {
+        Boolean gone = false;
         String name = room_service_name.getText();
         int roomId = Integer.parseInt(room_service_num.getText());
         String requirement = room_service_req.getText();
@@ -55,14 +56,29 @@ public class RoomServiceController implements Initializable {
             alert.showAndWait();
             return;
         }
-        String qu = "SELECT c.requirement " +
+        String qu = "SELECT c.requirement, c.isGone " +
                 "FROM CUSTOMER c " +
                 "WHERE c.name = '" + name + "' AND c.roomId = " + roomId + " ";
         System.out.println("Cheng's part");
         System.out.println(qu);
         ResultSet rs = databaseHandler.execQuery(qu);
         try{
+            if(!rs.next()){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(null);
+                alert.setContentText("No Such guest");
+                alert.showAndWait();
+                return;
+            }
             while(rs.next()){
+                gone = rs.getBoolean("isGone");
+                if(gone){
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText(null);
+                    alert.setContentText("The guest has already checked out");
+                    alert.showAndWait();
+                    return;
+                }
                 currentRequirement = rs.getString("requirement");
             }
         }catch (SQLException ex){

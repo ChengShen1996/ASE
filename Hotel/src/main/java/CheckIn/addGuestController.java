@@ -1,5 +1,6 @@
 package CheckIn;
 
+import java.util.*;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -24,9 +25,14 @@ import java.text.SimpleDateFormat;
 public class addGuestController implements Initializable{
 
     DatabaseHandler databaseHandler;
+    private Set<String> rooms;
+    private String[] roomnumbers;
+
     public void initialize(URL url, ResourceBundle rb){
         databaseHandler = new DatabaseHandler();
-
+        rooms = new HashSet<String>();
+        roomnumbers = new String[] {"101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "201", "202", "203", "204", "205", "206", "207", "208", "209", "210", "301", "302", "303", "304", "305", "306", "307", "308", "309", "310"};
+        Collections.addAll(rooms, roomnumbers);
     }
     @FXML
     private AnchorPane rootPane;
@@ -58,13 +64,20 @@ public class addGuestController implements Initializable{
     @FXML
     private JFXTextField check_in_date;
 
-
     @FXML
     void Show_total_price(ActionEvent event) {
         int totalPrice = calculateTotalPrice();
         System.out.println(totalPrice);
         if (totalPrice == 0) {
             priceText.setText("$?");
+            return;
+        }
+        else if(totalPrice == -1){
+            priceText.setText("Wrong date");
+            return;
+        }
+        else if(totalPrice == -2){
+            priceText.setText("Wrong Room Number");
             return;
         }
         priceText.setText("$" + totalPrice);
@@ -85,6 +98,7 @@ public class addGuestController implements Initializable{
 
     int calculateTotalPrice() {
         String roomId = room_number.getText();
+        if(!rooms.contains(roomId)){return -2;}
         String checkInDate = check_in_date.getText();
         String checkOutDate = check_out_date.getText();
         int oneDayPrice = 0;
@@ -114,10 +128,7 @@ public class addGuestController implements Initializable{
         try {
             dayInterval = calculateDateInterval(checkInDate, checkOutDate);
         } catch (Exception ex){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText(null);
-            alert.setContentText("Invalid Date Format");
-            alert.showAndWait();
+            return -1;
         }
 
         return oneDayPrice * dayInterval;
@@ -126,13 +137,32 @@ public class addGuestController implements Initializable{
 
     @FXML
     void addGuest(ActionEvent event) {
+
         String name = guest_name.getText();
         String roomId = room_number.getText();
         String checkInDate = check_in_date.getText();
         String checkOutDate = check_out_date.getText();
         String requirement = requirements.getText();
+
+        if(!rooms.contains(roomId)){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Wrong Room Number");
+            alert.showAndWait();
+            return;
+        }
+
         int totalPrice = calculateTotalPrice();
-        priceText.setText("$" + totalPrice);
+        if(totalPrice == -1){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Invalid Date Format");
+            alert.showAndWait();
+            priceText.setText("Wrong date");
+            return;
+        }
+        else{priceText.setText("$" + totalPrice);}
+
 
         if (name.isEmpty() || checkInDate.isEmpty() || checkOutDate.isEmpty() || roomId.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -141,6 +171,26 @@ public class addGuestController implements Initializable{
             alert.showAndWait();
             return;
         }
+
+
+        try {
+            String valid = "SELECT c.roomId FROM CUSTOMER c " +
+                    "WHERE c.roomId = " + roomId + " AND (('"
+                    + checkInDate + "' BETWEEN c.checkInDate AND c.checkOutDate) OR ('"
+                    + checkOutDate + "' BETWEEN c.checkInDate AND c.checkOutDate))";
+            System.out.println("here");
+            System.out.println(valid);
+            ResultSet rs = databaseHandler.execQuery(valid);
+            if (rs.next()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(null);
+                alert.setContentText("Not available room");
+                alert.showAndWait();
+                return;
+            }
+        }catch (SQLException ex){
+                Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE,null,ex);
+            }
 
         String qu = "INSERT INTO CUSTOMER VALUES("
                 + "'" + name + "',"
