@@ -1,4 +1,6 @@
+
 # Hotel Management System [![Build Status](https://travis-ci.org/ChengShen1996/ASE.svg?branch=iteration1-test-wen)](https://travis-ci.org/ChengShen1996/ASE) [![Coverage Status](https://coveralls.io/repos/github/ChengShen1996/ASE/badge.svg?branch=iteration2-chaiquan)](https://coveralls.io/github/ChengShen1996/ASE)
+
 
 Hotel management is a critical part of the hotel operation chain. Our goal is to create an efficient, secure, and user-friendly hotel management system to provide excellent service to the customers. Our hotel management system is an all-in -one application, which is designed to accommodate the needs of different staff members in the hotel. Front desk staffs are able to make the most suitable room arrangement and recommend places of interests to the customers. Managers are able to view and analyze the revenue over a certain period of time. We believe that our hotel management is capable of facilitating the service and helping the hotel to develop at a fast pace.
 
@@ -61,6 +63,21 @@ Tested by [Coveralls](https://coveralls.io/github/ChengShen1996/ASE)
 
 * [Derby](https://db.apache.org/derby/docs/10.0/manuals/develop/develop13.html) - The database used
 * [Maven](https://maven.apache.org/) - Dependency Management
+
+## Application Opreataion
+
+### User story 1: Login with manager and set room price or check revenue in a selected period.
+ login with Manager -> select Room Price/ Hotel Revenue -> set price/ calculate revenue
+<p float="left">
+  
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/login.png" alt="login" width="200" height= "220"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/manager_menu.png" alt="login" width="220" height= "250"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/set_price.png" alt="login" width="220" height= "250"/>
+<img src="https://github.com/ChengShen1996/ASE/blob/iteration2-chaiquan/image/check_revenue.png" alt="login" width="220" height= "250"/>
+</p>
+
+
+
 
 
 
