@@ -108,6 +108,7 @@ public class checkInUITest extends ApplicationTest {
                 f2.setText("2014-11-25");
                 f6.setText("2014-12-01");
                 bt1.fire();
+                assert(findGuest(q[0], q[1]) == false);
             }
         });
     }
@@ -130,6 +131,31 @@ public class checkInUITest extends ApplicationTest {
                 f5.setText("101");
                 f2.setText("2018-01-01");
                 f6.setText("2018-01-01");
+                bt3.fire();
+                bt1.fire();
+            }
+        });
+    }
+
+    @Test
+    public void InvalidAllPossibleFieldsTest(){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                JFXTextField f1 = lookup("#requirements").query();
+                JFXTextField f2 = lookup("#check_out_date").query();
+                JFXTextField f3 = lookup("#guest_name").query();
+                JFXTextField f5 = lookup("#room_number").query();
+                JFXTextField f6 = lookup("#check_in_date").query();
+                JFXButton bt1 = lookup("#save_button").query();
+                JFXButton bt2 = lookup("#cancel_button").query();
+                JFXButton bt3 = lookup("#Total_price_button").query();
+                Text t1 = lookup("#priceText").query();
+                String[] q = showGuest();
+                f3.setText(q[0]);
+                f5.setText("999");
+                f2.setText("x");
+                f6.setText("1");
                 bt3.fire();
                 bt1.fire();
             }
