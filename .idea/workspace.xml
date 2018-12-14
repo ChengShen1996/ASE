@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba597540-35a7-4400-b9a9-0fbf7216fd7d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cc30.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cc30.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cc80.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cc80.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cc91.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cc91.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/database/seg0/cca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/database/seg0/cca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/database/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c940.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c940.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c951.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c951.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seg0/c961.dat" beforeDir="false" afterPath="$PROJECT_DIR$/database/seg0/c961.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-    </list>
+    <list default="true" id="ba597540-35a7-4400-b9a9-0fbf7216fd7d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/Hotel/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +53,7 @@
           <entry key="fxml" value="22" />
           <entry key="iml" value="1" />
           <entry key="java" value="163" />
+          <entry key="md" value="1" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
@@ -76,6 +62,7 @@
           <entry key="CSS" value="6" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="163" />
+          <entry key="Markdown" value="1" />
           <entry key="XML" value="25" />
         </counts>
       </usages-collector>
@@ -104,47 +91,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/CheckIn/addGuestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
+            <state relative-caret-position="1574">
               <caret line="165" selection-start-line="165" selection-end-line="165" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/database/DatabaseHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2313">
-              <caret line="233" column="9" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="159" column="27" selection-start-line="159" selection-start-column="27" selection-end-line="159" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/frontDeskUITest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="117" column="39" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -247,74 +198,6 @@
               <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
               <item name="ASE" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CheckIn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontDesk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASE" type="462c0819:PsiDirectoryNode" />
-              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -325,7 +208,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544823499084" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544824667819" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -479,7 +362,7 @@
       <workItem from="1543282862770" duration="24261000" />
       <workItem from="1543342686390" duration="35637000" />
       <workItem from="1544812235950" duration="65000" />
-      <workItem from="1544812316685" duration="8883000" />
+      <workItem from="1544812316685" duration="9610000" />
     </task>
     <servers />
   </component>
@@ -516,7 +399,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101453000" />
+    <option name="totallyTimeSpent" value="102180000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -605,7 +488,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/Map/showMapController.java" />
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/Map/map.java" />
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/resources/GuestMenu.fxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -990,6 +872,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="159" column="27" selection-start-line="159" selection-start-column="27" selection-end-line="159" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-125" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/database/DatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2313">
@@ -1002,18 +902,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hotel/src/main/java/CheckIn/addGuestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
+        <state relative-caret-position="1574">
           <caret line="165" selection-start-line="165" selection-end-line="165" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Hotel/src/test/java/checkInUITest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="159" column="27" selection-start-line="159" selection-start-column="27" selection-end-line="159" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
