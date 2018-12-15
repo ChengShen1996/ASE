@@ -98,7 +98,7 @@ public class addGuestController implements Initializable{
 
     int calculateTotalPrice() {
         String roomId = room_number.getText();
-        if(!rooms.contains(roomId)){return -2;}
+        if(!roomId.isEmpty() && !rooms.contains(roomId)){return -2;}
         String checkInDate = check_in_date.getText();
         String checkOutDate = check_out_date.getText();
         int oneDayPrice = 0;
@@ -111,7 +111,6 @@ public class addGuestController implements Initializable{
             alert.showAndWait();
             return 0;
         }
-
 
         String qu = "SELECT price FROM ROOMTYPE, ROOM WHERE " +
                 "ROOM.roomTypeId = ROOMTYPE.roomTypeId " +
@@ -144,7 +143,7 @@ public class addGuestController implements Initializable{
         String checkOutDate = check_out_date.getText();
         String requirement = requirements.getText();
 
-        if(!rooms.contains(roomId)){
+        if(!roomId.isEmpty() && !rooms.contains(roomId)){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setContentText("Wrong Room Number");
@@ -211,12 +210,10 @@ public class addGuestController implements Initializable{
 
         }
         else {
-
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText(null);
             alert.setContentText("Failed");
             alert.showAndWait();
-
         }
         databaseHandler.checkData();
     }

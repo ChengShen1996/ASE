@@ -87,6 +87,50 @@ public class RoomServiceTest extends ApplicationTest{
         });
     }
 
+    @Test
+    public void invalidWrongRoomNumberTest() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                String[] q = showGuest();
+                JFXTextField f1 = lookup("#room_service_name").query();
+                JFXTextField f2 = lookup("#room_service_num").query();
+                JFXTextField f3 = lookup("#room_service_req").query();
+                JFXButton b = lookup("#room_service_save").query();
+                f1.setText(q[0]);
+                f2.setText("aaaa");
+                f3.setText("dog");
+                b.fire();
+                f1.setText("Garyyyy");
+                f2.setText("101");
+                f3.setText("dog");
+                b.fire();
+            }
+        });
+    }
+
+    @Test
+    public void GuestNonExistOrAlreadyCheckedOutTest() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                String[] q = AlreadyCheckedOutGuest();
+                JFXTextField f1 = lookup("#room_service_name").query();
+                JFXTextField f2 = lookup("#room_service_num").query();
+                JFXTextField f3 = lookup("#room_service_req").query();
+                JFXButton b = lookup("#room_service_save").query();
+                f1.setText("Garyyyy");
+                f2.setText("101");
+                f3.setText("dog");
+                b.fire();
+                f1.setText(q[0]);
+                f2.setText(q[1]);
+                f3.setText("dog");
+                b.fire();
+            }
+        });
+    }
+
     public String checkRequirement(String name, String room){
         int roomN = Integer.parseInt(room);
         String Req = "";
@@ -106,6 +150,21 @@ public class RoomServiceTest extends ApplicationTest{
     public String[] showGuest(){
         String[] result = new String[2];
         String qu = "SELECT c.name, c.roomId FROM CUSTOMER c";
+        ResultSet rs = databaseHandler.execQuery(qu);
+        try {
+            while (rs.next()) {
+                result[0] = rs.getString("name");
+                result[1] = String.valueOf(rs.getInt("roomId"));
+            }
+        } catch (SQLException ex){
+            Logger.getLogger(SetRoomPriceController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+
+    public String[] AlreadyCheckedOutGuest(){
+        String[] result = new String[2];
+        String qu = "SELECT c.name, c.roomId FROM CUSTOMER c WHERE c.isGone = true";
         ResultSet rs = databaseHandler.execQuery(qu);
         try {
             while (rs.next()) {

@@ -76,6 +76,9 @@ public class checkOutUITest extends ApplicationTest {
                 f1.setText("Wenwenwenwen");
                 f2.setText("666");
                 bt1.fire();
+                f1.setText("Wenwenwenwen");
+                f2.setText("101");
+                bt1.fire();
             }
         });
     }
@@ -98,9 +101,44 @@ public class checkOutUITest extends ApplicationTest {
         });
     }
 
+    @Test
+    public void AlreadyCheckedOutGuestTest() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                JFXTextField f1 = lookup("#check_out_guest_name").query();
+                JFXTextField f2 = lookup("#check_out_room_number").query();
+                JFXButton bt1 = lookup("#check_out").query();
+                JFXButton bt2 = lookup("#check_out_cancel").query();
+                String[] result = checkedOutGuest();
+                f1.setText(result[0]);
+                f2.setText(result[1]);
+                bt1.fire();
+                bt2.fire();
+            }
+        });
+    }
+
+
     public String[] showGuest(){
         String[] result = new String[2];
-        String qu = "SELECT c.name, c.roomId FROM CUSTOMER c";
+        String qu = "SELECT c.name, c.roomId FROM CUSTOMER c WHERE c.isGone = false";
+        ResultSet rs = databaseHandler.execQuery(qu);
+        try {
+            while (rs.next()) {
+                result[0] = rs.getString("name");
+                result[1] = String.valueOf(rs.getInt("roomId"));
+                return result;
+            }
+        } catch (SQLException ex){
+            Logger.getLogger(SetRoomPriceController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+
+    public String[] checkedOutGuest(){
+        String[] result = new String[2];
+        String qu = "SELECT c.name, c.roomId FROM CUSTOMER c WHERE c.isGone = true";
         ResultSet rs = databaseHandler.execQuery(qu);
         try {
             while (rs.next()) {

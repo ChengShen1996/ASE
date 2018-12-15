@@ -71,4 +71,25 @@ public class SetRoomPriceTest extends ApplicationTest{
         });
     }
 
+    @Test
+    public void invalidTest(){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                Button b1 = lookup("#single_button").query();
+                TextField f1 = lookup("#single_price").query();
+                Button b2 = lookup("#double_button").query();
+                TextField f2 = lookup("#double_price").query();
+                Button b3 = lookup("#suite_button").query();
+                TextField f3 = lookup("#suite_price").query();
+                f1.setText("aaa");
+                b1.fire();
+                f2.setText("011");
+                b2.fire();
+                f3.setText("-sdhahd");
+                b3.fire();
+            }
+        });
+    }
+
 }

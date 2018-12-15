@@ -63,7 +63,29 @@ public class frontDeskUITest extends ApplicationTest {
                 f1.setText("2018-11-01");
                 f2.setText("2018-11-09");
                 b1.fire();
-                //assert(v.getItems().isEmpty());
+                assert(!v.getItems().isEmpty());
+            }
+        });
+    }
+
+    @Test
+    public void showroomInvalidInputtest() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                JFXTextField f1 = lookup("#startDateText").query();
+                JFXTextField f2 = lookup("#endDateText").query();
+                TableView<Room> v = lookup("#tableView").query();
+                JFXButton b1 = lookup("#okBtn").query();
+                JFXButton b2 = lookup("#resetBtn").query();
+                b2.fire();
+                f1.setText("2018-11-01");
+                f2.setText("2018-10-01");
+                b1.fire();
+                f1.setText("zadqwq");
+                f2.setText("qweqeq");
+                b1.fire();
+                assert(v.getItems().isEmpty());
             }
         });
     }
@@ -84,6 +106,44 @@ public class frontDeskUITest extends ApplicationTest {
                 f2.setText(q[1]);
                 b1.fire();
                 assert(!t1.getText().isEmpty());
+            }
+        });
+    }
+
+    @Test
+    public void showguestMissingInfoTest() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                String[] q = showGuest();
+                JFXTextField f1 = lookup("#Guest_info_name").query();
+                JFXTextField f2 = lookup("#Guest_info_room").query();
+                TextField t1 = lookup("#guest_check_in").query();
+                JFXButton b1 = lookup("#guest_info_OK").query();
+                JFXButton b2 = lookup("#guest_info_Reset").query();
+                b2.fire();
+                b1.fire();
+                assert(t1.getText().isEmpty());
+            }
+        });
+    }
+
+    @Test
+    public void showguestWrongRoomNumberTest() {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                String[] q = showGuest();
+                JFXTextField f1 = lookup("#Guest_info_name").query();
+                JFXTextField f2 = lookup("#Guest_info_room").query();
+                TextField t1 = lookup("#guest_check_in").query();
+                JFXButton b1 = lookup("#guest_info_OK").query();
+                JFXButton b2 = lookup("#guest_info_Reset").query();
+                b2.fire();
+                f1.setText("Gary");
+                f2.setText("666");
+                b1.fire();
+                assert(t1.getText().isEmpty());
             }
         });
     }

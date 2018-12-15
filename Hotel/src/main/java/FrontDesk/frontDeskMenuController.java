@@ -270,7 +270,7 @@ public class frontDeskMenuController implements Initializable {
         } catch (SQLException ex){
             Logger.getLogger(addGuestController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("here:  " + list.size());
+        //System.out.println("here:  " + list.size());
 
         tableView.getItems().addAll(list);
     }
@@ -289,7 +289,13 @@ public class frontDeskMenuController implements Initializable {
     @FXML
     void show_guest(ActionEvent event) {
         String name = Guest_info_name.getText();
-
+        if(name.isEmpty() || Guest_info_room.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Missing Information");
+            alert.showAndWait();
+            return;
+        }
         if(!rooms.contains(Guest_info_room.getText())){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText(null);

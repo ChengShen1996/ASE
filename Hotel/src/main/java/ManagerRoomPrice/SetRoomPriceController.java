@@ -96,6 +96,15 @@ public class SetRoomPriceController implements Initializable {
 
     @FXML
     void change_single(ActionEvent event) {
+        if(!single_price.getText().matches("[1-9][0-9]*")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Wrong price input");
+            alert.showAndWait();
+            single_price.clear();
+            showsingle();
+            return;
+        }
         int single = Integer.parseInt(single_price.getText());
 
         String newqu = "UPDATE ROOMTYPE " +
@@ -115,6 +124,15 @@ public class SetRoomPriceController implements Initializable {
 
     @FXML
     void change_double(ActionEvent event) {
+        if(!double_price.getText().matches("[1-9][0-9]*")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Wrong price input");
+            alert.showAndWait();
+            double_price.clear();
+            showdouble();
+            return;
+        }
         int double_p = Integer.parseInt(double_price.getText());
         String newqu = "UPDATE ROOMTYPE " +
                 "SET price = " + double_p + " WHERE roomTypeName = 'Double' ";
@@ -132,6 +150,15 @@ public class SetRoomPriceController implements Initializable {
 
     @FXML
     void change_suite(ActionEvent event) {
+        if(!suite_price.getText().matches("[1-9][0-9]*")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Wrong price input");
+            alert.showAndWait();
+            suite_price.clear();
+            showsuite();
+            return;
+        }
         int suite = Integer.parseInt(suite_price.getText());
         String newqu = "UPDATE ROOMTYPE " +
                 "SET price = " + suite + " WHERE roomTypeName = 'Suite' ";

@@ -103,14 +103,7 @@ public class deleteGuestController implements Initializable {
             alert.showAndWait();
 
         }
-        else {
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText(null);
-            alert.setContentText("Failed");
-            alert.showAndWait();
-
-        }
         databaseHandler.checkData();
 
     }
