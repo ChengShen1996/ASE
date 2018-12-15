@@ -65,11 +65,15 @@ public class ShowRevenueController implements Initializable{
     else{
         String startDate = selectedYear + "-" + selectedMonth + "-01";
         String endDate = "";
-        if (selectedMonth == "01" || selectedMonth == "03" || selectedMonth == "05" || selectedMonth == "07" || selectedMonth == "08" || selectedMonth == "10" || selectedMonth == "12") {
+        System.out.print(selectedMonth);
+        if (selectedMonth.equals("1") || selectedMonth.equals("3") || selectedMonth.equals("5") || selectedMonth.equals("7") || selectedMonth.equals("8") || selectedMonth.equals("10") || selectedMonth.equals("12")) {
+            System.out.println("big");
             endDate = selectedYear + "-" + selectedMonth + "-31";
-        } else if (selectedMonth == "02") {
+        } else if (selectedMonth.equals("2")) {
+            System.out.println("2");
             endDate = selectedYear + "-" + selectedMonth + "-28";
         } else {
+            System.out.println("small");
             endDate = selectedYear + "-" + selectedMonth + "-30";
         }
 
